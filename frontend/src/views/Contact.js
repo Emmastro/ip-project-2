@@ -1,5 +1,6 @@
-function Contact() {
+import React from 'react'
 
+function Contact () {
   return (
     <div>
       <div className="w-full h-screen bg-[url('/contactuspic.jpg')] bg-cover bg-no-repeat bg-fixed">
@@ -53,7 +54,6 @@ function Contact() {
         </div>
       </div>
     </div>
-
   )
 }
 

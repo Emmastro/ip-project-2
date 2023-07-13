@@ -1,14 +1,13 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 
-function Footer() {
+
+const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
     <div className='bg-[url(/footer_pic.avif)] w-full text-black flex flex-col items-center justify-center pt-10 pb-4'>
       <h1 className='text-xl w-2/3 md:w-full text-center font-medium md:font-normal md:text-3xl'>Want to find out which job is suitable for your skills?</h1>
-      <Link href="/" className='rounded w-2/5 md:w-1/5 p-2 text-white text-center my-6 bg-gray-900'>Get Started</Link>
+      <a href="/" className='rounded w-2/5 md:w-1/5 p-2 text-white text-center my-6 bg-gray-900'>Get Started</a>
       <hr className="w-2/3 md:w-1/2 mb-6 border-gray-900 mx-auto lg:mb-6"/>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16'>
         <div>
@@ -32,25 +31,25 @@ function Footer() {
         <div>
           <h1 className='font-semibold'>Socials</h1>
           <div className='flex justify-between'>
-            <Image
+            <img
               src='/facebook.png'
               width={20}
               height={20}
               className='hover:scale-125 cursor-pointer'
             />
-            <Image
+            <img
               src='/twitter.png'
               width={20}
               height={20}
               className='hover:scale-125 cursor-pointer'
             />
-            <Image
+            <img
               src='/instagram.png'
               width={20}
               height={20}
               className='hover:scale-125 cursor-pointer'
             />
-            <Image
+            <img
               src='/linkedin.png'
               width={20}
               height={20}
@@ -61,7 +60,7 @@ function Footer() {
       </div>
       <div>
         <p className="text-xs mt-4">
-          © {currentYear}<Link href="/" className="hover:underline"> JOB DATA™</Link>. All Rights Reserved.
+          © {currentYear}<a href="/" className="hover:underline"> JOB DATA™</a>. All Rights Reserved.
         </p>
       </div>
     </div>
