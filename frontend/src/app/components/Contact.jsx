@@ -11,7 +11,7 @@ function Contact() {
           </h1>
           <p className="w-3/4 md:w-1/2 text-left mt-8 leading-7">We are more than happy to assist you with any queries you might be having about the software in general. We would also be
             glad to answer questions that would make your experience smooth and enjoyable today and in the long-run. Our assistants are always
-            available to offer informed guidance as as needs arise.
+            available to offer informed guidance as the need arises.
           </p>
         </div>
       </div>

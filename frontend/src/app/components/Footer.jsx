@@ -6,7 +6,7 @@ function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <div className='bg-[#F4ECC2] w-full text-black flex flex-col items-center justify-center pt-10 pb-4'>
+    <div className='bg-[url(/footer_pic.avif)] w-full text-black flex flex-col items-center justify-center pt-10 pb-4'>
       <h1 className='text-xl w-2/3 md:w-full text-center font-medium md:font-normal md:text-3xl'>Want to find out which job is suitable for your skills?</h1>
       <Link href="/" className='rounded w-2/5 md:w-1/5 p-2 text-white text-center my-6 bg-gray-900'>Get Started</Link>
       <hr className="w-2/3 md:w-1/2 mb-6 border-gray-900 mx-auto lg:mb-6"/>
