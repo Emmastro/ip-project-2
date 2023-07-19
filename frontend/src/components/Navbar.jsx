@@ -16,6 +16,7 @@ function Navbar() {
               <li><a href="#">Career</a></li>
               
               <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/blog">Blog</a></li>
             </ul>
           </nav>
         </div>

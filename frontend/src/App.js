@@ -6,6 +6,7 @@ import Home from "./views/Home";
 import About from "./views/About.js";
 import Register from "./views/Register.js";
 import Contact from "./views/Contact";
+import Blog from "./views/Blog";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/blog" element={<Blog />} />
 
       </Routes>
     </BrowserRouter>
