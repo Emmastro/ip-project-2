@@ -1,4 +1,3 @@
-// SalaryHistoryChart.js
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import jsonFile from  '../cached_response/salary_history_uk.json';

@@ -12,6 +12,7 @@ function Navbar() {
           <nav class="mx-auto site-navigation">
             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
               <li><a href="index.html" class="nav-link active">Home</a></li>
+              <li><a href="/APIPage1">Salary History</a></li>
               <li><a href="#">Our Team</a></li>
               <li><a href="#">Career</a></li>
               
