@@ -1,6 +1,8 @@
-// SalaryHistoryChart.js
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
+import { Chart as ChartJS, registerables } from 'chart.js';
+
+ChartJS.register(...registerables);
 
 const SalaryHistoryChart = () => {
   const [chartData, setChartData] = useState({});
@@ -12,35 +14,29 @@ const SalaryHistoryChart = () => {
 
   const fetchSalaryHistoryData = async () => {
     try {
-      const response = await fetch('cached_response/salary_history_uk.json');
-      if (!response.ok) {
-        throw new Error('Failed to fetch the salary history data.');
-      }
-      const contentType = response.headers.get('content-type');
-      // if (!contentType || !contentType.includes('application/json')) {
-      //   throw new Error('Response is not valid JSON.');
-      // }
-      const salaryHistoryData = await response.json();
-      console.log(salaryHistoryData, 'salaryHistoryData')
-      console.log(contentType, 'contentType')
+      // Fetch the JSON data from the file
+      const salaryHistoryData = require('./cached_response/salary_history_uk.json')
+      console.log(salaryHistoryData)
   
       // Check if the data is valid
-  //     if (!salaryHistoryData || !salaryHistoryData.month) {
-  //       throw new Error('Invalid salary history data format.');
-  //     }
+      if (!salaryHistoryData || !salaryHistoryData.month) {
+        throw new Error('Invalid salary history data format.');
+      }
   
       // Process the data from the JSON file into chart-friendly format
       const labels = Object.keys(salaryHistoryData.month);
       const data = Object.values(salaryHistoryData.month);
+      const country = Object.values(salaryHistoryData.location.display_name);
   
       setChartData({
         labels,
         datasets: [
           {
-            label: 'Average Salary',
+            label: 'Average Salary in ' + country,
             data,
-            fill: false,
-            borderColor: 'rgba(75,192,192,1)',
+            fill: true,
+            responsive:true,
+            borderColor: 'rgba(0, 0, 0, 1)',
             tension: 0.1,
           },
         ],

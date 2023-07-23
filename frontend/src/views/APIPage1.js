@@ -7,12 +7,8 @@ const APIPage1 = () => {
 
   return (
     <>
-      <Navbar />
-
-      <section
-        class="home-section section-hero overlay bg-image"
-        id="home-section"
-      >
+    {/* We need a different Navbar for the API Pages */}
+      <section className="map">
       
         <SalaryHistoryChart />
 
