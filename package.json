@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "react-chartjs-2": "^5.2.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
