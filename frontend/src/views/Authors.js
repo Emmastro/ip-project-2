@@ -18,7 +18,7 @@ function Authors() {
     },
     {
       url: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-      name: "Deborah Ama Paintsil",
+      name: "Benson Mugure",
       interest:
         "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       contribution:
@@ -28,7 +28,7 @@ function Authors() {
     },
     {
       url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-      name: "Deborah Ama Paintsil",
+      name: "Emmanuel Murairi",
       interest:
         "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       contribution:
@@ -39,7 +39,7 @@ function Authors() {
 
     {
       url: "https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80",
-      name: "Deborah Ama Paintsil",
+      name: "Josephine Ekhator",
       interest:
         "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       contribution:
@@ -49,7 +49,7 @@ function Authors() {
     },
     {
       url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-      name: "Deborah Ama Paintsil",
+      name: "Justus Chemirmir",
       interest:
         "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       contribution:
@@ -59,7 +59,7 @@ function Authors() {
     },
     {
       url: "https://media.istockphoto.com/id/1420730022/photo/colorful-powder-explode-on-black-background-captured-in-high-speed.webp?b=1&s=170667a&w=0&k=20&c=uHPHMniD2I0DWQfVTrbRMRVQT-JJ4J9ZLxNf7Web9zY=",
-      name: "Deborah Ama Paintsil",
+      name: "Mussie Teferi",
       interest:
         "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       contribution:
