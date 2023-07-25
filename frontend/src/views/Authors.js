@@ -7,8 +7,11 @@ import Footer from "../components/Footer";
 function Authors() {
   const teams = [
     {
-      url: "../images/learning.jpeg",
-      interest: "ballow",
+      url: "../images/Deb.jpg",
+      name: "Deborah Ama Paintsil",
+      interest: "Interests",
+      contribution: "Contributions",
+      others: "Others",
     },
     {
       url: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
@@ -76,20 +79,27 @@ function Authors() {
         </div>
 
         <div className="max-w-[800px] h-[700px] w-full mx-auto mt-48 py-16 px-4 relative group">
-          <h1 className="text-xl w-2/3 md:w-full text-center font-medium md:font-normal md:text-3xl">
+          <h1 className="mb-5 text-xl w-2/3 md:w-full text-center font-medium md:font-normal md:text-3xl">
             Meet The Team
           </h1>
           <div
             style={{ backgroundImage: `url(${teams[currentIndex].url})` }}
             className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
           ></div>
-          <div>{teams[currentIndex].interest}</div>
+          <div className="text-center py-4 text-2xl font-bold">
+            {teams[currentIndex].name}
+          </div>
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-12 text-center">
+            <div>{teams[currentIndex].interest}</div>
+            <div>{teams[currentIndex].contribution}</div>
+            <div>{teams[currentIndex].others}</div>
+          </div>
           {/* Left Arrow */}
-          <div className="hidden group-hover:block absolute top-[55%] -translate-x-0 translate-y-[-50%] left-8 text-2xl rounded-full p-1 bg-black/20 text-black cursor-pointer">
+          <div className="hidden group-hover:block absolute top-[55%] -translate-x-0 translate-y-[-50%] left-8 text-2xl rounded-full p-1 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactLeft onClick={prevSlide} size={30} />
           </div>
           {/* Right Arrow */}
-          <div className="hidden group-hover:block absolute top-[55%] -translate-x-0 translate-y-[-50%] right-8 text-2xl rounded-full p-1 bg-black/20 text-black cursor-pointer">
+          <div className="hidden group-hover:block absolute top-[55%] -translate-x-0 translate-y-[-50%] right-8 text-2xl rounded-full p-1 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactRight onClick={nextSlide} size={30} />
           </div>
           <div className="flex top-4 justify-center py-2">
@@ -105,7 +115,6 @@ function Authors() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
