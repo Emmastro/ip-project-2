@@ -9,23 +9,63 @@ function Authors() {
     {
       url: "../images/Deb.jpg",
       name: "Deborah Ama Paintsil",
-      interest: "Interests",
-      contribution: "Contributions",
-      others: "Others",
+      interest:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      contribution:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      others:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
     {
       url: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-      interest: "honm",
+      name: "Deborah Ama Paintsil",
+      interest:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      contribution:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      others:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
     {
       url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      name: "Deborah Ama Paintsil",
+      interest:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      contribution:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      others:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
 
     {
       url: "https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80",
+      name: "Deborah Ama Paintsil",
+      interest:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      contribution:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      others:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
     {
       url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      name: "Deborah Ama Paintsil",
+      interest:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      contribution:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      others:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+    {
+      url: "https://media.istockphoto.com/id/1420730022/photo/colorful-powder-explode-on-black-background-captured-in-high-speed.webp?b=1&s=170667a&w=0&k=20&c=uHPHMniD2I0DWQfVTrbRMRVQT-JJ4J9ZLxNf7Web9zY=",
+      name: "Deborah Ama Paintsil",
+      interest:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      contribution:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      others:
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
   ];
 
@@ -90,9 +130,18 @@ function Authors() {
             {teams[currentIndex].name}
           </div>
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-12 text-center">
-            <div>{teams[currentIndex].interest}</div>
-            <div>{teams[currentIndex].contribution}</div>
-            <div>{teams[currentIndex].others}</div>
+            <div>
+              <p>Interest</p>
+              <p className="py-4">{teams[currentIndex].interest}</p>
+            </div>
+            <div>
+              <p>Contribution</p>
+              <p className="py-4">{teams[currentIndex].contribution}</p>
+            </div>
+            <div>
+              <p>Others</p>
+              <p className="py-4">{teams[currentIndex].others}</p>
+            </div>
           </div>
           {/* Left Arrow */}
           <div className="hidden group-hover:block absolute top-[55%] -translate-x-0 translate-y-[-50%] left-8 text-2xl rounded-full p-1 bg-black/20 text-white cursor-pointer">
