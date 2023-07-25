@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## API ENDPOINTS
+
+http://api.adzuna.com/v1/api/jobs/gb/history?app_id={APP_ID}&app_key={API_KEY}&location0=UK&location1=London&category=it-jobs&content-type=application/json
+
+http://api.adzuna.com/v1/api/jobs/gb/history?app_id={APP_ID}&app_key=f1ccb10a76d8a623215954059d2901f5&location0=UK&location1=London&category=it-jobs&content-type=application/json
+
