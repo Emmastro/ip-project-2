@@ -13,15 +13,24 @@ const Home = () => {
           <div class="row align-items-center justify-content-center">
             <div class="col-md-12">
               <div class="mb-5 text-center">
-                <h1 class="text-white font-weight-bold">
-                  Job Data Visualization
+                <h1 class="text-white font-weight-bold mb-5">
+                  Discover Global Job Trends Through Data Visualization
                 </h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Cupiditate est, consequuntur perferendis.
+                <p class="mb-3">
+                  Make Informed Decisions and gain valuable insights to shape
+                  your career choices and job search strategies.
+                </p>
+                <p class="mb-3">
+                  We source data from reputable government databases,
+                  international job portals, and research reports worldwide.
+                  Rest assured, our data is regularly updated for accuracy.
+                </p>
+                <p class="mb-3">
+                  We also offer comprehensive documentation and helpful tooltips
+                  to assist you in navigating our data and visualizations
+                  effectively.
                 </p>
               </div>
-              
             </div>
           </div>
         </div>
