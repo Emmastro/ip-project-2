@@ -12,7 +12,7 @@ function Authors() {
       interest:
         "I love UI/UX desiging of an application before it is developed. I also found a keen interent in Artifical Intelligence and Augmented Reality and would love to explore more into these fields.",
       contribution:
-        "Helped in designing of the website for both low fidelity and high fidelity designs. Additionally, I also built the team's page of the website application",
+        "I contributed to both low-fidelity and high-fidelity website design. Additionally, I led the development of the team's page for the website application and played a key role in writing and ensuring the overall quality and clarity of the group report.",
       others:
         "I want to become an advocate for bridging the technology gender gap by working with schools and community organizations to provide Computing workshops and educational programs for the girl child.",
     },
@@ -43,7 +43,7 @@ function Authors() {
       interest:
         "Teaching computing is my passion, as it allows me to share knowledge and empower students with valuable skills. I envision myself as an educator who fosters creativity, problem-solving, and a passion for learning.",
       contribution:
-        "Helped in sourcing out the API's for the job search.Additionally, I played a crucial part in crafting the group report, ensuring its clarity, organization, and overall quality.",
+        "Helped in sourcing out the API's for the job search. Additionally, I played a crucial part in crafting the group report, ensuring its clarity, organization, and overall quality.",
       others:
         "Exploring diverse cultures and understanding their significance is a source of great fascination for me. I appreciate how culture shapes societies, influences art, and fosters unique perspectives on life.",
     },
