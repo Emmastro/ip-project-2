@@ -14,22 +14,17 @@ const Home = () => {
             <div class="col-md-12">
               <div class="mb-5 text-center">
                 <h1 class="text-white font-weight-bold mb-5">
-                  Discover Global Job Trends Through Data Visualization
+                  Empowering Careers Worldwide
                 </h1>
                 <p class="mb-3">
-                  Make Informed Decisions and gain valuable insights to shape
-                  your career choices and job search strategies.
+                  Discover Global Job Trends Through Data Visualization.
                 </p>
                 <p class="mb-3">
                   We source data from reputable government databases,
                   international job portals, and research reports worldwide.
-                  Rest assured, our data is regularly updated for accuracy.
                 </p>
-                <p class="mb-3">
-                  We also offer comprehensive documentation and helpful tooltips
-                  to assist you in navigating our data and visualizations
-                  effectively.
-                </p>
+                <p>Rest assured, our data is regularly updated for accuracy.</p>
+                <p class="mt-5">"Our Data, Your Confidence."</p>
               </div>
             </div>
           </div>
