@@ -5,6 +5,7 @@ import { Chart as ChartJS, registerables } from "chart.js";
 ChartJS.register(...registerables);
 
 
+
 const SalaryHistoryChart = (salaryHistoryData) => {
 
   console.log("salaryHistoryData", salaryHistoryData)
