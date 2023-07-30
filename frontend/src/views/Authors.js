@@ -10,9 +10,9 @@ function Authors() {
       url: "../images/Deb.jpg",
       name: "Deborah Ama Paintsil",
       interest:
-        "I love UI/UX desiging of an application before it is developed. I also found a keen interent in Artifical Intelligence and Augmented Reality and would love to explore more into these fields.",
+        "I love UI/UX desiging of an application before it is developed. I also found a keen interest in Artifical Intelligence and Augmented Reality and would love to explore more into these fields.",
       contribution:
-        "I contributed to both low-fidelity and high-fidelity website design. Additionally, I led the development of the team's page for the website application and played a key role in writing and ensuring the overall quality and clarity of the group report.",
+        "I contributed to both the low-fidelity and high-fidelity website design. Additionally, I led the development of the team's page for the website application and played a key role in writing and ensuring the overall quality and clarity of the group report.",
       others:
         "I want to become an advocate for bridging the technology gender gap by working with schools and community organizations to provide Computing workshops and educational programs for the girl child.",
     },
@@ -38,7 +38,7 @@ function Authors() {
     },
 
     {
-      url: "./images/jossy.jpg",
+      url: "../images/jossy.jpg",
       name: "Josephine Nation Ekhator",
       interest:
         "Teaching computing is my passion, as it allows me to share knowledge and empower students with valuable skills. I envision myself as an educator who fosters creativity, problem-solving, and a passion for learning.",
@@ -58,14 +58,14 @@ function Authors() {
         "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
     {
-      url: "https://media.istockphoto.com/id/1420730022/photo/colorful-powder-explode-on-black-background-captured-in-high-speed.webp?b=1&s=170667a&w=0&k=20&c=uHPHMniD2I0DWQfVTrbRMRVQT-JJ4J9ZLxNf7Web9zY=",
+      url: "../images/mussie.jpg",
       name: "Mussie Teferi",
       interest:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "My interest lies in the field of hardware engineering, where I delve into designing and developing physical components for electronic devices and computer systems, driven by a passion for hands-on problem-solving and innovation.",
       contribution:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        " I played a pivotal role in crafting, designing and developing the website application's overview page. I contributed significantly to both the overview page design and development.",
       others:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "With an unwavering ardor for hands-on exploration and relentless problem-solving, I find genuine fulfillment in unearthing inventive solutions to intricate engineering puzzles. ",
     },
   ];
 
@@ -104,7 +104,7 @@ function Authors() {
               <p className="font-light">
                 This website will focus on the following key principles:
               </p>
-              <ul className="font-light py-1 leading-8">
+              <ul className="font-bold py-1 leading-8">
                 <li>Data Diversity</li>
                 <li>Data Visualization Emphasis</li>
                 <li>Data Accuracy and Timeliness</li>
@@ -117,10 +117,12 @@ function Authors() {
               <p className="font-light">
                 This is to democratize job-related data and empower individuals,
                 businesses, and policymakers with valuable insights to make
-                informed decisions in the global job market. By providing access
-                to comprehensive and visually engaging data, the website aims to
-                bridge the information gap and promote greater transparency in
-                the world of work.
+                informed decisions in the global job market.
+              </p>
+              <p className="font-light">
+                By providing access to comprehensive and visually engaging data,
+                the website aims to bridge the information gap and promote
+                greater transparency in the world of work.
               </p>
             </div>
             <div className="bg-[#F4ECC2] h-[23em] w-[20em]  p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
@@ -131,7 +133,7 @@ function Authors() {
                 The website will offer a range of services to fulfill its
                 mission and deliver a valuable experience to users:
               </p>
-              <ul className="font-light py-1 leading-8">
+              <ul className="font-bold py-1 leading-8">
                 <li>Data Aggregation</li>
                 <li>Data Visualization</li>
                 <li>Eductaional Content</li>
