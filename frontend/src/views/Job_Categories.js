@@ -2,63 +2,138 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import SalaryHistoryChart from "../components/SalaryHistoryChart";
-import { Bar, Pie, Scatter, HorizontalBar, Doughnut } from 'react-chartjs-2';
+import { Bar, PolarArea, Scatter, HorizontalBar, Doughnut } from 'react-chartjs-2';
 
+
+const createScatterChartData = (data) => {
+  /*Visualize salary */
+
+  const scatterData = data.results.map((job) => ({
+    x: job.salary_min + (job.salary_max - job.salary_min) / 2, // Using the middle point of the salary range as x-value
+    y: job.latitude,
+    title: job.title,
+  }));
+
+  return {
+    datasets: [
+      {
+        label: "Job Locations",
+        data: scatterData,
+        backgroundColor: '#FF6384'
+      },
+    ],
+  };
+};
+
+// Function to generate an array of random colors
+const getRandomColors = (count) => {
+  const colors = [];
+  for (let i = 0; i < count; i++) {
+    colors.push(getRandomColor());
+  }
+  return colors;
+};
+
+// Function to generate a random color
+const getRandomColor = () => {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
 
 const createDoughnutChartData = (data) => {
+  
+  const jobCategories = data.results.map((job) => job.category.label);
+  const categoryCounts = jobCategories.reduce((acc, category) => {
+    acc[category] = (acc[category] || 0) + 1;
+    return acc;
+  }, {});
+
+  const uniqueColors = getRandomColors(Object.keys(categoryCounts).length);
 
   return {
-    labels: ["Permanent"],
+    labels: Object.keys(categoryCounts),
     datasets: [
       {
-        data: [2],
-        backgroundColor: ["#FF6384"],
+        data: Object.values(categoryCounts),
+        backgroundColor: uniqueColors,
       },
     ],
   };
 };
 
-const createHorizontalBarChartData = (data) => {
+const groupDataByCategory = (data) => {
+  const groupedData = {};
+  data.results.forEach((result) => {
+    const categoryLabel = result.category.label;
+    if (!groupedData[categoryLabel]) {
+      groupedData[categoryLabel] = {
+        salarySum: 0,
+        count: 0,
+      };
+    }
+    groupedData[categoryLabel].salarySum += (result.salary_min + result.salary_max) / 2;
+    groupedData[categoryLabel].count++;
+  });
+
+  const labels = Object.keys(groupedData);
+  const averageSalaries = labels.map((label) => groupedData[label].salarySum / groupedData[label].count);
+
+  return { labels, averageSalaries };
+};
+
+const createHorizontalBarChartData = (job) => {
   // Your logic to extract data for Horizontal Bar Chart
   // Example:
+  const { labels, averageSalaries } = groupDataByCategory(job)
+
+ // Sort the data from highest to lowest average salary
+ const sortedData = labels.map((label) => {
   return {
-    labels: [data.results[0].title, data.results[1].title],
+    label,
+    averageSalary: averageSalaries[labels.indexOf(label)],
+  };
+});
+sortedData.sort((a, b) => b.averageSalary - a.averageSalary);
+
+  return {
+    labels: sortedData.map((item) => item.label),
     datasets: [
       {
+        label: "Average   Salary",
+        backgroundColor: ["#FF6384", "#000000", "#FF0000", "#00FF00"],
+        data: sortedData.map((item) => item.averageSalary),
+      },
+    ],
+  };
+};
+
+const createPolarAreaChartData = (job) => {
+  const { labels, averageSalaries } = groupDataByCategory(job);
+
+  // Calculate the salary range for each category
+  const salaryRanges = labels.map((label) => {
+    const minSalary = Math.min(...job.results.filter((result) => result.category.label === label).map((result) => result.salary_min));
+    const maxSalary = Math.max(...job.results.filter((result) => result.category.label === label).map((result) => result.salary_max));
+    return maxSalary - minSalary;
+  });
+
+  return {
+    labels,
+    datasets: [
+      {
+        data: salaryRanges,
+        backgroundColor: ["#FF6384", "#000000", "#FF0000", "#00FF00"],
         label: "Salary Range",
-        backgroundColor: ["#FF6384", "#36A2EB"],
-        data: [
-          {
-            x: data.results[0].salary_min,
-            y: data.results[0].salary_max - data.results[0].salary_min,
-          },
-          {
-            x: data.results[1].salary_min,
-            y: data.results[1].salary_max - data.results[1].salary_min,
-          },
-        ],
       },
     ],
   };
 };
 
-const createBarChartData = (data) => {
-  // Your logic to extract data for Bar Chart
-  // Example:
-  return {
-    labels: ['Mean Salary', 'Maximum Salary'],
-    datasets: [
-      {
-        label: 'Salary',
-        backgroundColor: ['#FF6384', '#36A2EB'],
-        data: [data.mean, data.results[0].salary_max],
-      },
-    ],
-  };
-};
-
-
-const APIPage1 = () => {
+const JobCategories = () => {
   const [salaryHistoryData, setJobData] = useState(null);
   const [searchData, setSearchData] = useState(null);
 
@@ -191,12 +266,28 @@ const APIPage1 = () => {
       <section className="map">
         <div className="grid grid-cols-2 grid-rows-2 gap-10">
           <div>
-            {salaryHistoryData && <SalaryHistoryChart {...salaryHistoryData} />}
+            <h2>Job Categories Distribution</h2>
+            {searchData && <Scatter data={createScatterChartData(searchData)} />}
+          </div>
+           <div>
+            <h2>Number of Jobs in each Category</h2>
+            {searchData && <Doughnut data={createDoughnutChartData(searchData)} />}
           </div>
           <div>
-            <h2>Comparison of Mean Salary and Maximum Salaries</h2>
-            {/* Consider changing to Box Plot */}
-            {searchData && <Bar data={createBarChartData(searchData)} />}
+            <h2>Average Salary in each Category</h2>
+            {searchData && <Bar data={createHorizontalBarChartData(searchData)}
+            options={{
+              indexAxis: 'y', // Set the chart to be horizontal
+              scales: {
+                x: {
+                  beginAtZero: true, // Set this to false if you don't want the x-axis to start at zero
+                },
+              },
+            }}/>}
+          </div>
+          <div>
+            <h2>Average Salary in each Category</h2>
+            {searchData && <PolarArea data={createPolarAreaChartData(searchData)} />}
           </div>
         </div>
       </section>
@@ -205,4 +296,4 @@ const APIPage1 = () => {
   );
 };
 
-export default APIPage1;
+export default JobCategories;
