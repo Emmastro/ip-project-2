@@ -17,14 +17,14 @@ function Authors() {
         "I want to become an advocate for bridging the technology gender gap by working with schools and community organizations to provide Computing workshops and educational programs for the girl child.",
     },
     {
-      url: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      url: "../images/benson.jpeg",
       name: "Benson Mugure",
       interest:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "I am interested in Distributed Ledger Systems, Artificial Intelligence, Augmented Reality and Quantum Computing",
       contribution:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "I helped make the visualizations from the data fetched through the API",
       others:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "I write poems and fight crime (bugs)",
     },
     {
       url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
