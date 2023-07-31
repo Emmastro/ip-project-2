@@ -6,6 +6,7 @@ import Login from "./views/Login";
 import Home from "./views/Home";
 import APIPage1 from "./views/APIPage1";
 import JobCategories from "./views/Job_Categories";
+import JobsMap from "./views/map"
 import About from "./views/About.js";
 import Authors from "./views/Authors.js";
 import Register from "./views/Register.js";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/APIPage1" element={<APIPage1 />} />
         <Route path="/jobcategories" element={<JobCategories />} />
+        <Route path="/jobsonmap" element={<JobsMap />} />
         <Route path="/about" element={<About />} />
         <Route path="/authors" element={<Authors/>} />
         <Route path="/register" element={<Register />} />
