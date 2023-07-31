@@ -1667,3 +1667,82 @@ h1, h2, h3, h4 {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+/* Ensure relative positioning for the body */
+body {
+  margin: 0;
+  position: relative; 
+}
+
+/* The container for Picture and Notes section */
+.container {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.picture {
+  flex: 1;
+  padding: 20px;
+  position: relative; /* Ensure relative positioning for the .picture class */
+}
+
+.picture img {
+  width: 100%;
+  height: 250px; /* Adjust this value to set the height for the picture */
+  object-fit: cover; 
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -80%;
+}
+
+/* Style for the notes section */
+.notes {
+  flex: 2;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  position: relative; /* Ensure relative positioning for the notes section */
+}
+
+.notes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px; /* Adjust the indentation to the left */
+  right: 0; 
+  bottom: 0;
+  background-color: black; /* Match the background color of the notes section */
+  z-index: -1;
+}
+
+.notes h2 {
+  margin-top: 0;
+  color: white;
+}
+
+.notes p {
+  color: white;
+  margin: 0; 
+  text-align: left; /* Align the text to the left */
+}
+
+/* Add any additional CSS styling for the notes section here */
+
+.explore-data {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 2px solid yellow;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.explore-data:hover {
+  background-color: yellow;
+  color: black;
+}
