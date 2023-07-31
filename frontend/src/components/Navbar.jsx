@@ -13,6 +13,7 @@ function Navbar() {
             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
               <li><a href="/" class="nav-link active">Home</a></li>
               <li><a href="/APIPage1">Salary History</a></li>
+              <li><a href="/jobcategories">Job categories</a></li>
               <li><a href="/authors">Our Team</a></li>             
               <li><a href="/contact">Contact Us</a></li>
               <li><a href="/blog">Blog</a></li>
