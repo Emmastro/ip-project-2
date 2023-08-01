@@ -22,7 +22,7 @@ function Authors() {
       interest:
         "I am interested in Distributed Ledger Systems, Artificial Intelligence, Augmented Reality and Quantum Computing",
       contribution:
-        "I helped make the visualizations from the data fetched through the API",
+        "Integral backend contributor, skillfully crafted API-driven visualizations for the website application, enhancing user experience",
       others:
         "I write poems and fight crime (bugs)",
     },
@@ -48,14 +48,14 @@ function Authors() {
         "Exploring diverse cultures and understanding their significance is a source of great fascination for me. I appreciate how culture shapes societies, influences art, and fosters unique perspectives on life.",
     },
     {
-      url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      url: "../images/Justus.jpg",
       name: "Justus Chemirmir",
       interest:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "I enjoy creating engaging and interactive animations or interactions on websites to enhance the user experience.",
       contribution:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "Worked on the frontend development of the project. My contributions extended to meticulously designing the website with high fidelity and building both the 'Contact Us' and 'Blog' pages",
       others:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "I love to study the principles of typography for the web and how to use fonts effectively to improve readability and design aesthetics",
     },
     {
       url: "../images/mussie.jpg",
@@ -163,20 +163,9 @@ function Authors() {
           <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-8 text-2xl rounded-full p-1 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactRight onClick={nextSlide} size={30} />
           </div>
-          <div className="flex top-4 justify-center py-2">
-            {teams.map((slide, slideIndex) => (
-              <div
-                key={slideIndex}
-                onClick={() => goToSlide(slideIndex)}
-                className="text-2xl cursor-pointer"
-              >
-                <RxDotFilled />
-              </div>
-            ))}
-          </div>
         </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-12 text-center w-4/5 mx-auto">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 text-center w-4/5 mx-auto">
           <div>
             <p className="text-black text-2xl">Interest</p>
             <p className="py-4 leading-8">{teams[currentIndex].interest}</p>
@@ -190,6 +179,18 @@ function Authors() {
             <p className="py-4 leading-8">{teams[currentIndex].others}</p>
           </div>
         </div>
+
+        <div className="flex top-4 justify-center py-2">
+            {teams.map((slide, slideIndex) => (
+              <div
+                key={slideIndex}
+                onClick={() => goToSlide(slideIndex)}
+                className="text-2xl cursor-pointer"
+              >
+                <RxDotFilled />
+              </div>
+            ))}
+          </div>
       </div>
       <Footer />
     </>
