@@ -1,30 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import SalaryCharts from "../components/map";
-import { useEffect } from "react";
-
 
 const JobsMap = () => {
-    const [searchData, setSearchData] = useState(null);
+  const [searchData, setSearchData] = useState(null);
 
-    // Search results
-    const responseSearch = fetch("/cached_responses/search_results.json", {
-        method: "GET",
-    }).then((response) => response.json())
-    .catch((error) => console.error(error));
-  
-        console.log("Response:", responseSearch);
-        useEffect(()=>{
-            setSearchData(responseSearch);
-        }, [])
+  useEffect(() => {
+    // Use an async function to fetch data and handle errors
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/cached_responses/search_results.json");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setSearchData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-    return (
-        <>
-            {/* <SalaryCharts {...searchData}/> */}
-            {searchData && <SalaryCharts {...searchData} />}
-        </>
-    )
-}
+    fetchData();
+  }, []);
+
+  // Check if searchData is available before rendering SalaryCharts
+  return (
+    <>
+    <Navbar />
+    <br></br>
+    <br></br>
+    <div className="flex items-center justify-center">
+        {searchData ? <SalaryCharts jobs={searchData.results} /> : <div>Loading...</div>}
+    </div>
+    <Footer />
+    </>
+  );
+};
 
 export default JobsMap;

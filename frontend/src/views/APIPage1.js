@@ -18,30 +18,6 @@ const createDoughnutChartData = (data) => {
   };
 };
 
-const createHorizontalBarChartData = (data) => {
-  // Your logic to extract data for Horizontal Bar Chart
-  // Example:
-  return {
-    labels: [data.results[0].title, data.results[1].title],
-    datasets: [
-      {
-        label: "Salary Range",
-        backgroundColor: ["#FF6384", "#36A2EB"],
-        data: [
-          {
-            x: data.results[0].salary_min,
-            y: data.results[0].salary_max - data.results[0].salary_min,
-          },
-          {
-            x: data.results[1].salary_min,
-            y: data.results[1].salary_max - data.results[1].salary_min,
-          },
-        ],
-      },
-    ],
-  };
-};
-
 const createBarChartData = (data) => {
   // Your logic to extract data for Bar Chart
   // Example:
@@ -100,11 +76,10 @@ const APIPage1 = () => {
             <div class="col-md-12">
               <div class="mb-5 text-center">
                 <h1 class="text-white font-weight-bold">
-                  Job Data Visualization
+                  Job Salary Visualization
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Cupiditate est, consequuntur perferendis.
+                  Have a look at the minimum, average and maximum salaries here!
                 </p>
               </div>
               <form
@@ -189,16 +164,18 @@ const APIPage1 = () => {
       </section>
 
       <section className="map">
-        <div className="grid grid-cols-2 grid-rows-2 gap-10">
-          <div>
+        <a href="APIPageExp">
+        <div className="flex">
+          <div className="basis-1/2">
             {salaryHistoryData && <SalaryHistoryChart {...salaryHistoryData} />}
           </div>
-          <div>
+          <div className="basis-1/2">
             <h2>Comparison of Mean Salary and Maximum Salaries</h2>
             {/* Consider changing to Box Plot */}
             {searchData && <Bar data={createBarChartData(searchData)} />}
           </div>
         </div>
+        </a>
       </section>
       <Footer />
     </>

@@ -5,26 +5,6 @@ import SalaryHistoryChart from "../components/SalaryHistoryChart";
 import { Bar, PolarArea, Scatter, HorizontalBar, Doughnut } from 'react-chartjs-2';
 
 
-const createScatterChartData = (data) => {
-  /*Visualize salary */
-
-  const scatterData = data.results.map((job) => ({
-    x: job.salary_min + (job.salary_max - job.salary_min) / 2, // Using the middle point of the salary range as x-value
-    y: job.latitude,
-    title: job.title,
-  }));
-
-  return {
-    datasets: [
-      {
-        label: "Job Locations",
-        data: scatterData,
-        backgroundColor: '#FF6384'
-      },
-    ],
-  };
-};
-
 // Function to generate an array of random colors
 const getRandomColors = (count) => {
   const colors = [];
@@ -111,28 +91,6 @@ sortedData.sort((a, b) => b.averageSalary - a.averageSalary);
   };
 };
 
-const createPolarAreaChartData = (job) => {
-  const { labels, averageSalaries } = groupDataByCategory(job);
-
-  // Calculate the salary range for each category
-  const salaryRanges = labels.map((label) => {
-    const minSalary = Math.min(...job.results.filter((result) => result.category.label === label).map((result) => result.salary_min));
-    const maxSalary = Math.max(...job.results.filter((result) => result.category.label === label).map((result) => result.salary_max));
-    return maxSalary - minSalary;
-  });
-
-  return {
-    labels,
-    datasets: [
-      {
-        data: salaryRanges,
-        backgroundColor: ["#FF6384", "#000000", "#FF0000", "#00FF00"],
-        label: "Salary Range",
-      },
-    ],
-  };
-};
-
 const JobCategories = () => {
   const [salaryHistoryData, setJobData] = useState(null);
   const [searchData, setSearchData] = useState(null);
@@ -175,11 +133,10 @@ const JobCategories = () => {
             <div class="col-md-12">
               <div class="mb-5 text-center">
                 <h1 class="text-white font-weight-bold">
-                  Job Data Visualization
+                  Job Category Data Visualization
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Cupiditate est, consequuntur perferendis.
+                  Check out the number of Jobs and Average salary per job category
                 </p>
               </div>
               <form
@@ -264,16 +221,13 @@ const JobCategories = () => {
       </section>
 
       <section className="map">
-        <div className="grid grid-cols-2 grid-rows-2 gap-10">
-          <div>
-            <h2>Job Categories Distribution</h2>
-            {searchData && <Scatter data={createScatterChartData(searchData)} />}
-          </div>
-           <div>
+        <div className="flex">
+        <a href="/jobcategoriesExp">
+           <div className="basis-1/2">
             <h2>Number of Jobs in each Category</h2>
             {searchData && <Doughnut data={createDoughnutChartData(searchData)} />}
           </div>
-          <div>
+          <div className="basis-1/2 container mx-auto">
             <h2>Average Salary in each Category</h2>
             {searchData && <Bar data={createHorizontalBarChartData(searchData)}
             options={{
@@ -285,10 +239,7 @@ const JobCategories = () => {
               },
             }}/>}
           </div>
-          <div>
-            <h2>Average Salary in each Category</h2>
-            {searchData && <PolarArea data={createPolarAreaChartData(searchData)} />}
-          </div>
+          </a>
         </div>
       </section>
       <Footer />
