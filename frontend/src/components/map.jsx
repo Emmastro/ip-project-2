@@ -1,6 +1,7 @@
 import React from 'react';
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 
+
 const containerStyle = {
   width: '100%',
   height: '500px',
@@ -35,7 +36,7 @@ const SalaryCharts = ({ data }) => {
   //! Google Maps API options - ERROR HERE.
   const libraries = ['places'];
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyBjH_kpDVGSCzIwlUhLRM20tDTL4Tz9_ZM', // YOUR_GOOGLE_MAPS_API_KEY
+    // googleMapsApiKey: 'AIzaSyCT3L_vNLSQ17JoSljnbQqFHV3_j5SAC4I', // YOUR_GOOGLE_MAPS_API_KEY
     libraries,
   });
 
