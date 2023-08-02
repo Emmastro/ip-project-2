@@ -11,6 +11,7 @@ import Authors from "./views/Authors.js";
 import Register from "./views/Register.js";
 import Contact from "./views/Contact";
 import Blog from "./views/Blog";
+import Read from "./views/Read";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
-
+        <Route path="/blog/:id" element={<Read />} />
       </Routes>
     </BrowserRouter>
   );
