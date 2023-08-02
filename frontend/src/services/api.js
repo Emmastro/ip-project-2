@@ -22,8 +22,19 @@ export const getBlogs = async () => {
 }
 
 export const getBlog = async (id) => {
-    const response = await fetch(`/api/blog/${id}`)
+    const response = await fetch(`/api/blog/${id}/`)
     const data = await response.json()
     return data
 }
 
+export const addContact = async (name, email, message) => {
+    const response = await fetch(`/api/contact/add/`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({name: name, email: email, message: message})
+    })
+    const data = await response.json()
+    return data
+}
