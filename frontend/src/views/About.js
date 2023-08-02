@@ -151,7 +151,7 @@ function Authors() {
             style={{ backgroundImage: `url(${teams[currentIndex].url})` }}
             className="w-[70%] h-[70%] rounded-2xl bg-center bg-cover duration-500"
           ></div>
-          <div className="text-center py-4 text-2xl font-bold">
+          <div className="text-center mt-4 text-2xl font-bold">
             {teams[currentIndex].name}
           </div>
           {/* Left Arrow */}
@@ -179,7 +179,7 @@ function Authors() {
           </div>
         </div>
 
-        <div className="flex top-4 justify-center py-2">
+        <div className="flex justify-center py-3 text-gray-900">
           {teams.map((slide, slideIndex) => (
             <div
               key={slideIndex}

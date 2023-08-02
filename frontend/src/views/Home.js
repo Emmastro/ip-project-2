@@ -29,7 +29,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 mb-12 px-24 mt-10">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 mb-12 lg:px-24 mt-10">
           <div className="p-3">
             <img src="../images/call.png" width={300} height={300} />
           </div>
@@ -52,25 +52,25 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 mb-12 px-24">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 mb-12 lg:px-24">
           <div className="p-3">
             <img src="../images/choose us.jpg" width={500} height={500} />
           </div>
           <div className="p-3">
             <h2 className="text-2xl pb-3">Why Choose Us</h2>
-            <div className="p-3 mb-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+            <div className="p-3 mb-3 bg-[#F4ECC2] hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
               <p>
                 1. Make Informed Decisions: Gain valuable insights to shape your
                 career choices and job search strategies.
               </p>
             </div>
-            <div className="p-3 mb-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+            <div className="p-3 mb-3 bg-[#F4ECC2] hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
               <p>
                 2. Stay Ahead of the Curve: Understand global job trends and
                 stay competitive in the evolving job market.
               </p>
             </div>
-            <div className="p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+            <div className="p-3 bg-[#F4ECC2] hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
               <p>
                 3. Business Advantage: Leverage data to make informed hiring
                 decisions and enhance workforce planning.
@@ -79,12 +79,12 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="px-24">
+        <div className="lg:px-24">
           <p className="py-3 text-black text-2xl">
             Read Exciting Blogs From The Team
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
               <img src="../images/learning.jpeg" width={500} height={500} />
               <h1 className="text-sm font-semibold text-zinc-500 mt-3 mb-1">
@@ -113,12 +113,6 @@ const Home = () => {
                 How to work effectively and survive in the IT sector
               </p>
             </div>
-            <a
-              href="/"
-              className="rounded h-10 w-48 p-2 text-[#F4ECC2] text-center my-6 bg-gray-900"
-            >
-              Go To Blogs
-            </a>
           </div>
         </div>
 
@@ -127,6 +121,7 @@ const Home = () => {
             Specification for Project
           </h1>
           <a
+            target="_blank"
             href="https://docs.google.com/document/d/1mH4bEU1CJ1g4PLbdHQJjLOzVyRpWS9GGTYvfDQJSNq4/edit"
             className="rounded h-10 w-48 p-2 bg-[#F4ECC2] text-center my-6 text-black"
           >
