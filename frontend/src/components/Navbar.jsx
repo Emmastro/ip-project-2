@@ -14,7 +14,7 @@ function Navbar() {
               <li><a href="/" class="nav-link active">Home</a></li>
               <li><a href="/APIPage1">Salary History</a></li>
               <li><a href="/jobcategories">Job categories</a></li>
-              <li><a href="/authors">Our Team</a></li>             
+              <li><a href="/about">About Us</a></li>             
               <li><a href="/contact">Contact Us</a></li>
               <li><a href="/blog">Blog</a></li>
             </ul>
