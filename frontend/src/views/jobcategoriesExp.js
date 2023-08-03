@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-const Job_Categories_exp = () => {
+const JobCategories_exp = () => {
   return (
     <div>
         <Navbar />
@@ -43,4 +43,4 @@ const Job_Categories_exp = () => {
   );
 };
 
-export default Job_Categories_exp;
+export default JobCategories_exp;

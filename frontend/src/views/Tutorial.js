@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-const APIPageExp = () => {
+const Tutorial = () => {
   return (
     <div>
         <Navbar />
@@ -44,4 +44,4 @@ const APIPageExp = () => {
   );
 };
 
-export default APIPageExp;
+export default Tutorial;
