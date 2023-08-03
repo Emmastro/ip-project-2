@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import SalaryHistoryChart from "../components/SalaryHistoryChart";
-import { Bar, Pie, Scatter, HorizontalBar, Doughnut } from 'react-chartjs-2';
-
+import { Bar } from "react-chartjs-2";
+import {
+  REACT_APP_LOAD, BASE_URL, URL_CREDENTIALS
+} from "../constants";
 
 const createDoughnutChartData = (data) => {
-
   return {
     labels: ["Permanent"],
     datasets: [
@@ -20,33 +21,42 @@ const createDoughnutChartData = (data) => {
 
 const createBarChartData = (data) => {
   // Your logic to extract data for Bar Chart
-  // Example:
+  console.log("createBarChartData: ", data);
   return {
-    labels: ['Mean Salary', 'Maximum Salary'],
+    labels: ["Mean Salary", "Maximum Salary"],
     datasets: [
       {
-        label: 'Salary',
-        backgroundColor: ['#FF6384', '#36A2EB'],
+        label: "Salary",
+        backgroundColor: ["#FF6384", "#36A2EB"],
         data: [data.mean, data.results[0].salary_max],
       },
     ],
   };
 };
 
-
-const APIPage1 = () => {
+const SalaryHistory = () => {
   const [salaryHistoryData, setJobData] = useState(null);
   const [searchData, setSearchData] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const jobTitle = formData.get("jobtitle");
+    const jobCategory = formData.get("jobcategory");
+    const location = formData.get("location");
 
-    // Salary history
-    // API endpoint: http://api.adzuna.com/v1/api/jobs/gb/history?app_id={APP_ID}&app_key={API_KEY}&location0=UK&location1=London&category=it-jobs&content-type=application/json
-    const responseHistory = await fetch("/cached_responses/salary_history_uk.json", {
+    let endpoint = "/cached_responses/salary_history.json";
+
+    if (REACT_APP_LOAD === "live") {
+      endpoint = `${BASE_URL}/${location}/history?${URL_CREDENTIALS}&category=${jobCategory}`;
+    }
+
+    console.log('fetching from endpoint: ', endpoint);
+    const responseHistory = await fetch(endpoint, {
       method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+          },
     })
       .then((response) => response.json())
       .catch((error) => console.error(error));
@@ -54,11 +64,24 @@ const APIPage1 = () => {
     console.log("Response:", responseHistory);
     setJobData(responseHistory);
 
-    // Search results
-    const responseSearch = await fetch("/cached_responses/search_results.json", {
-      method: "GET",
-  }).then((response) => response.json())
-  .catch((error) => console.error(error));
+    endpoint = "/cached_responses/search_results.json";
+    
+    if (REACT_APP_LOAD === "live") {
+      endpoint = `${BASE_URL}/${location}/search?${URL_CREDENTIALS}&results_per_page=30`;
+    }
+
+    const responseSearch = await fetch(
+      endpoint,
+      {
+        method: "GET",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .catch((error) => console.error(error));
 
     console.log("Response:", responseSearch);
     setSearchData(responseSearch);
@@ -92,8 +115,8 @@ const APIPage1 = () => {
                     <input
                       type="text"
                       class="form-control form-control-lg"
-                      name="jobtitle"
-                      placeholder="Job title, Company..."
+                      name="jobcategory"
+                      placeholder="Job Category"
                     />
                   </div>
 
@@ -102,6 +125,7 @@ const APIPage1 = () => {
                   </label>
                   <select
                     id="underline_select"
+                    name="location"
                     class="text-gray-500 bg border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
                   >
                     <option selected>Choose a country</option>
@@ -165,16 +189,21 @@ const APIPage1 = () => {
 
       <section className="map">
         <a href="APIPageExp">
-        <div className="flex">
-          <div className="basis-1/2">
-            {salaryHistoryData && <SalaryHistoryChart {...salaryHistoryData} />}
+          <div className="flex">
+            <div className="basis-1/2">
+              {salaryHistoryData && (
+                <SalaryHistoryChart {...salaryHistoryData} />
+              )}
+            </div>
+            <div className="basis-1/2">
+              {searchData && (
+                <>
+                  <h2>Comparison of Mean Salary and Maximum Salaries</h2>
+                  <Bar data={createBarChartData(searchData)} />
+                </>
+              )}
+            </div>
           </div>
-          <div className="basis-1/2">
-            <h2>Comparison of Mean Salary and Maximum Salaries</h2>
-            {/* Consider changing to Box Plot */}
-            {searchData && <Bar data={createBarChartData(searchData)} />}
-          </div>
-        </div>
         </a>
       </section>
       <Footer />
@@ -182,4 +211,4 @@ const APIPage1 = () => {
   );
 };
 
-export default APIPage1;
+export default SalaryHistory;
