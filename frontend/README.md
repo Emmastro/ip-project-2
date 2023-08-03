@@ -76,3 +76,25 @@ http://api.adzuna.com/v1/api/jobs/gb/history?app_id={APP_ID}&app_key={API_KEY}&l
 
 http://api.adzuna.com/v1/api/jobs/gb/history?app_id={APP_ID}&app_key=f1ccb10a76d8a623215954059d2901f5&location0=UK&location1=London&category=it-jobs&content-type=application/json
 
+Supported countries:
+
+gb: United Kingdom
+us: United States
+at: Austria
+au: Australia
+be: Belgium
+br: Brazil
+ca: Canada
+ch: Switzerland
+de: Germany
+es: Spain
+fr: France
+in: India
+it: Italy
+mx: Mexico
+nl: Netherlands
+nz: New Zealand
+pl: Poland
+ru: Russia
+sg: Singapore
+za: South Africa

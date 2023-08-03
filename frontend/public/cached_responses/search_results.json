@@ -1,0 +1,900 @@
+{
+  "count": 1024411,
+  "mean": 36882.73,
+  "results": [
+    {
+      "latitude": 52.4146,
+      "longitude": 0.752958,
+      "company": {
+        "display_name": "HM Prison Service",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "contract_time": "full_time",
+      "description": "One career, many roles. HM Prison officer opportunities HMP Wayland \u00a328,880 - \u00a332,523 (includes additional allowance and unsocial hours)  excellent benefits Prison officers protect the public and help offenders turn their lives around. If you have the integrity, skills and strength of character we\u2019re looking for, this fast-paced role could be the start of a successful career. No two days or situations are ever the same. And, as you gain experience, you\u2019ll find a range of opportunities to grow a\u2026",
+      "salary_max": 32523,
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4200078913?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=4ED20382A617F8CBC63EE984C735C6BFBABD81B0",
+      "contract_type": "permanent",
+      "salary_min": 28880,
+      "salary_is_predicted": "0",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNDIwMDA3ODkxMyIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.b2eszkgvVo_hf9tuqtyTr7Dkw0q7J9k9eoQE_7M181w",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "Eastern England", "Norfolk", "Thetford"],
+        "display_name": "Thetford, Norfolk"
+      },
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Security guard prison - HMP Wayland",
+      "id": "4200078913",
+      "category": {
+        "tag": "admin-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Admin Jobs"
+      },
+      "created": "2023-07-11T13:56:58Z"
+    },
+    {
+      "id": "4205801710",
+      "salary_max": 29718.4,
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "description": "We are looking for motivated self employed Gardeners based in London. We are looking for tradespeople who can service the thousands of UK homeowners who use our service every month. We are looking for self employed contractors who have the skills and necessary qualifications. Through our service we provide opportunities for trades to take on work as and when they require it. Required Education, Skills and Qualifications We are looking primarily for trades with: 3 years experience in their chose\u2026",
+      "title": "Gardeners",
+      "location": {
+        "display_name": "London, UK",
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "London"]
+      },
+      "created": "2023-07-14T13:46:04Z",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4205801710?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=4040D89984CA7E9B7B4CE5420C281D085EBB4B9B",
+      "category": {
+        "tag": "trade-construction-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Trade & Construction Jobs"
+      },
+      "salary_min": 29718.4,
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjA1ODAxNzEwIn0.zOkrZVPMsjVUkHE8QEP4StBTT1_6I5JqlPZmY1CfuXI",
+      "company": {
+        "display_name": "MyJobQuote",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "salary_is_predicted": "1"
+    },
+    {
+      "contract_time": "full_time",
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "HM Prison Service"
+      },
+      "longitude": 1.31313,
+      "latitude": 52.094299,
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4200079012?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=E0F03A08443FFF70968E3E6A8BDC111A55D0A20B",
+      "contract_type": "permanent",
+      "description": "One career, many roles. Prison officer opportunities HMP Hollesley Bay and HMP Warren Hill \u00a323,144 - \u00a325,710 Prison officers protect the public and help offenders turn their lives around. If you have the integrity, skills and strength of character we\u2019re looking for, this fast-paced role could be the start of a successful career. No two days or situations are ever the same. And, as you gain experience, you\u2019ll find a range of opportunities to grow and develop into. What we expect from our prison \u2026",
+      "salary_max": 32523,
+      "salary_is_predicted": "0",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjAwMDc5MDEyIn0.NOFoBY0AdUbhqYdXDbXBK1nWlIrHVNEh7i4zFZteSzk",
+      "salary_min": 28880,
+      "created": "2023-07-11T13:57:00Z",
+      "category": {
+        "tag": "admin-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Admin Jobs"
+      },
+      "id": "4200079012",
+      "title": "Security guard prison - Hollesley Bay",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Woodbridge, Suffolk",
+        "area": ["UK", "Eastern England", "Suffolk", "Woodbridge"]
+      }
+    },
+    {
+      "salary_min": 41481.75,
+      "salary_is_predicted": "1",
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "MyJobQuote"
+      },
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNDIwNTgwMTcxNSIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.4Nft93uSEpp4F_zAvoZRmVkobRO5tqkBSH9FwQZewb0",
+      "title": "Flooring Specialists",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "description": "We are looking for motivated self employed Flooring Specialists based in London. We are looking for tradespeople who can service the thousands of UK homeowners who use our service every month. We are looking for self employed contractors who have the skills and necessary qualifications. Through our service we provide opportunities for trades to take on work as and when they require it. Required Education, Skills and Qualifications We are looking primarily for trades with: 3 years experience in \u2026",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "London"],
+        "display_name": "London, UK"
+      },
+      "salary_max": 41481.75,
+      "id": "4205801715",
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Trade & Construction Jobs",
+        "tag": "trade-construction-jobs"
+      },
+      "created": "2023-07-14T13:46:04Z",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4205801715?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=616455CDB5F0FEBA50725A7C243A17E551E32E62"
+    },
+    {
+      "created": "2023-07-11T15:51:17Z",
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Admin Jobs",
+        "tag": "admin-jobs"
+      },
+      "id": "4200162605",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "Yorkshire And The Humber", "North Yorkshire", "York"],
+        "display_name": "York, North Yorkshire"
+      },
+      "title": "Correctional officer",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjAwMTYyNjA1In0.p-P1snul0HUj394S1PWbwxrd8bTWXRbwiiDb-GbBeA8",
+      "salary_is_predicted": "0",
+      "salary_min": 28880,
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4200162605?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=6C2A48747F806D95F7956DCB787E76F9FF7ED7B2",
+      "salary_max": 32523,
+      "description": "One career, many roles. Prison officer opportunities HMP Full Sutton \u00a328,880 - \u00a332,523 Prison officers protect the public and help offenders turn their lives around. If you have the integrity, skills and strength of character we\u2019re looking for, this fast-paced role could be the start of a successful career. No two days or situations are ever the same. And, as you gain experience, you\u2019ll find a range of opportunities to grow and develop into. What we expect from our prison officers There\u2019s no su\u2026",
+      "contract_time": "full_time",
+      "company": {
+        "display_name": "HM Prison Service",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "longitude": -1.08229,
+      "latitude": 53.957699
+    },
+    {
+      "contract_time": "full_time",
+      "company": {
+        "display_name": "HM Prison Service",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "latitude": 52.4146,
+      "longitude": 0.752958,
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4200162608?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=ED6BF10A19D99FDC7F994AF58DE4413E56B0B6E8",
+      "description": "One career, many roles. HM Prison officer opportunities HMP Wayland \u00a328,880 - \u00a332,523 (includes additional allowance and unsocial hours)  excellent benefits Prison officers protect the public and help offenders turn their lives around. If you have the integrity, skills and strength of character we\u2019re looking for, this fast-paced role could be the start of a successful career. No two days or situations are ever the same. And, as you gain experience, you\u2019ll find a range of opportunities to grow a\u2026",
+      "salary_max": 32523,
+      "salary_is_predicted": "0",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjAwMTYyNjA4In0.l-Mpn27mZMCl4YgrTpIrj9OmQ8Tt9I-HstNTjS2BGiQ",
+      "salary_min": 28880,
+      "created": "2023-07-11T15:51:17Z",
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Admin Jobs",
+        "tag": "admin-jobs"
+      },
+      "id": "4200162608",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Correctional officer",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Thetford, Norfolk",
+        "area": ["UK", "Eastern England", "Norfolk", "Thetford"]
+      }
+    },
+    {
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "MyJobQuote"
+      },
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjA1ODAxNzE3In0.93rFQm-JmMPq0sU6gxWEasEQ-GyJjikj5VgDWDe_1EY",
+      "salary_min": 37865.36,
+      "created": "2023-07-14T13:46:04Z",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4205801717?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=D70445E45B3A34279E24B1A9AEEC4B92C39D57CD",
+      "category": {
+        "label": "Trade & Construction Jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "tag": "trade-construction-jobs"
+      },
+      "id": "4205801717",
+      "description": "We are looking for motivated self employed Builders based in London. We are looking for tradespeople who can service the thousands of UK homeowners who use our service every month. We are looking for self employed contractors who have the skills and necessary qualifications. Through our service we provide opportunities for trades to take on work as and when they require it. Required Education, Skills and Qualifications We are looking primarily for trades with: 3 years experience in their chosen\u2026",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "London, UK",
+        "area": ["UK", "London"]
+      },
+      "title": "Builders",
+      "salary_max": 37865.36
+    },
+    {
+      "id": "4017476566",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Prison Officer - Hollesley Bay",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Woodbridge, Suffolk",
+        "area": ["UK", "Eastern England", "Suffolk", "Woodbridge"]
+      },
+      "created": "2023-04-03T14:54:34Z",
+      "category": {
+        "tag": "admin-jobs",
+        "label": "Admin Jobs",
+        "__CLASS__": "Adzuna::API::Response::Category"
+      },
+      "salary_min": 28880,
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNDAxNzQ3NjU2NiIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.tRbgUxEL6q7-3XLWdiAITpZweuXFtE_4Jx6oaeCCEkA",
+      "salary_is_predicted": "0",
+      "salary_max": 32523,
+      "description": "One career, many roles. Prison officer opportunities HMP Hollesley Bay and HMP Warren Hill \u00a323,144 - \u00a325,710 Prison officers protect the public and help offenders turn their lives around. If you have the integrity, skills and strength of character we\u2019re looking for, this fast-paced role could be the start of a successful career. No two days or situations are ever the same. And, as you gain experience, you\u2019ll find a range of opportunities to grow and develop into. What we expect from our prison \u2026",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4017476566?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=52152E7858FF17EE8B440905CD19A4FCE73E30C9",
+      "contract_type": "permanent",
+      "longitude": 1.31313,
+      "latitude": 52.094299,
+      "contract_time": "full_time",
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "HM Prison Service"
+      }
+    },
+    {
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "Scotland", "County Stirling", "Mugdock"],
+        "display_name": "Mugdock, County Stirling"
+      },
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor (Training provided)",
+      "id": "4212192695",
+      "category": {
+        "tag": "logistics-warehouse-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Logistics & Warehouse Jobs"
+      },
+      "created": "2023-07-18T20:21:55Z",
+      "salary_min": 36961.41,
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNDIxMjE5MjY5NSIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.Sb9IYQkLWzQGYTk4rhIlEY_dOaAl2h88pjeep8bXxws",
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "salary_max": 36961.41,
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212192695?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=360D8F5151A067F7BD5E1D9064D3B9655C81BA86",
+      "latitude": 55.963001,
+      "longitude": -4.30807,
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "My Four Wheels"
+      },
+      "contract_time": "full_time"
+    },
+    {
+      "salary_min": 35851.7,
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjEyMTkwNjYzIn0.K-mB2EiW28gO0pT87npEpgbeGctUd_niR6CxBPzzYzs",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "display_name": "Blaenau Ffestiniog, Gwynedd",
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "Wales", "Gwynedd", "Blaenau Ffestiniog"]
+      },
+      "title": "Driving Instructor (Training provided)",
+      "id": "4212190663",
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Logistics & Warehouse Jobs",
+        "tag": "logistics-warehouse-jobs"
+      },
+      "created": "2023-07-18T20:21:33Z",
+      "latitude": 52.9884,
+      "longitude": -3.92747,
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "My Four Wheels"
+      },
+      "contract_time": "full_time",
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "salary_max": 35851.7,
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212190663?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=55735FE58A0D46B891E50B3A195B1F3789763E0C",
+      "contract_type": "permanent"
+    },
+    {
+      "salary_max": 36834.91,
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212193252?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=B041282C18C3E5DBCA46BB7CCA18A85472B20145",
+      "contract_type": "permanent",
+      "latitude": 53.069302,
+      "longitude": -3.00698,
+      "contract_time": "full_time",
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "id": "4212193252",
+      "title": "Driving Instructor (Training provided)",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "Wales", "Wrexham", "Rhosrobin"],
+        "display_name": "Rhosrobin, Wrexham"
+      },
+      "created": "2023-07-18T20:22:03Z",
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Logistics & Warehouse Jobs",
+        "tag": "logistics-warehouse-jobs"
+      },
+      "salary_min": 36834.91,
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjEyMTkzMjUyIn0.BB-8Ufr5G3fnh4zhPOLVILetlTGbius8XHf8_rKOP2c",
+      "salary_is_predicted": "1"
+    },
+    {
+      "salary_min": 36082.2,
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjEyMTkxOTU3In0.O8tH5wiaFFQlA4SJiviavAns-pu9L2ma__cW8Mqww14",
+      "salary_is_predicted": "1",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Orton Wistow, Peterborough",
+        "area": ["UK", "Eastern England", "Peterborough", "Orton Wistow"]
+      },
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor (Training provided)",
+      "id": "4212191957",
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Logistics & Warehouse Jobs",
+        "tag": "logistics-warehouse-jobs"
+      },
+      "created": "2023-07-18T20:21:46Z",
+      "longitude": -0.3127,
+      "latitude": 52.553799,
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "contract_time": "full_time",
+      "salary_max": 36082.2,
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212191957?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=147909D76C11D2B120CB6E0192861E8221625F8A"
+    },
+    {
+      "description": "My Four Wheels are on the lookout for people who are looking to start a new career as a Driving Instructor. No experience necessary as we provide full training. Once completed, you are then guaranteed a job with us in your area with earnings of \u00a327,000 - \u00a332,000 per year (dependant on how many hours you work). Due to the ever growing population in the UK, there is always a growing demand for more Driving Instructors year on year. It now takes the average learner driver 47 lessons to pass their \u2026",
+      "salary_max": 28664.05,
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/3701310489?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=297DF1368FF72071BCBA2530EC4E86BA909B6297",
+      "latitude": 53.2817,
+      "longitude": -3.82844,
+      "contract_time": "full_time",
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "id": "3701310489",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "Wales", "Conwy County", "Conwy"],
+        "display_name": "Conwy, Conwy County"
+      },
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor Trainee",
+      "created": "2022-11-18T15:13:27Z",
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Teaching Jobs",
+        "tag": "teaching-jobs"
+      },
+      "salary_min": 28664.05,
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiMzcwMTMxMDQ4OSIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.yNGYv69uvwu7eIyEyQ9Ls--1FG0tscyqy_fPBJdvJ1Y"
+    },
+    {
+      "contract_time": "full_time",
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "latitude": 51.448229,
+      "longitude": -0.195605,
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212192363?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=72A2E539FC0B340C2CB5BC35B79A9C5506E4E67A",
+      "contract_type": "permanent",
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "salary_max": 39634.79,
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjEyMTkyMzYzIn0.g_wWC5pjrfMOMixVeBtSaDlG8C2aF7k_4HuRt-DZDMk",
+      "salary_min": 39634.79,
+      "created": "2023-07-18T20:21:51Z",
+      "category": {
+        "tag": "logistics-warehouse-jobs",
+        "label": "Logistics & Warehouse Jobs",
+        "__CLASS__": "Adzuna::API::Response::Category"
+      },
+      "id": "4212192363",
+      "title": "Driving Instructor (Training provided)",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "London", "South West London"],
+        "display_name": "South West London, London"
+      }
+    },
+    {
+      "latitude": 52.258301,
+      "longitude": -1.16043,
+      "contract_time": "full_time",
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "salary_max": 38521.34,
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212191546?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=E5C2BF97F8E97EB312B50E0BA115ECA55D07323F",
+      "salary_min": 38521.34,
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjEyMTkxNTQ2In0.DL2blroJoKPVnF5yUHVQS6DkggiUcqJ-z2k7lf8d7RY",
+      "salary_is_predicted": "1",
+      "id": "4212191546",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor (Training provided)",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "East Midlands", "Northamptonshire", "Daventry"],
+        "display_name": "Daventry, Northamptonshire"
+      },
+      "created": "2023-07-18T20:21:42Z",
+      "category": {
+        "tag": "logistics-warehouse-jobs",
+        "label": "Logistics & Warehouse Jobs",
+        "__CLASS__": "Adzuna::API::Response::Category"
+      }
+    },
+    {
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/3701310204?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=95154FB2F09E29B97616F8A2E5102458552F57DA",
+      "contract_type": "permanent",
+      "description": "My Four Wheels are on the lookout for people who are looking to start a new career as a Driving Instructor. No experience necessary as we provide full training. Once completed, you are then guaranteed a job with us in your area with earnings of \u00a327,000 - \u00a332,000 per year (dependant on how many hours you work). Due to the ever growing population in the UK, there is always a growing demand for more Driving Instructors year on year. It now takes the average learner driver 47 lessons to pass their \u2026",
+      "salary_max": 29000.47,
+      "contract_time": "full_time",
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "My Four Wheels"
+      },
+      "longitude": -2.24934,
+      "latitude": 51.3507,
+      "created": "2022-11-18T15:13:25Z",
+      "category": {
+        "label": "Teaching Jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "tag": "teaching-jobs"
+      },
+      "id": "3701310204",
+      "title": "Driving Instructor Trainee",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "display_name": "Bradford-On-Avon, Wiltshire",
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "South West England", "Wiltshire", "Bradford-On-Avon"]
+      },
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiIzNzAxMzEwMjA0In0.7oQCpn_iioOmpkNZKG-0gztY6JK6Xz2rOdmXnwOIZpQ",
+      "salary_min": 29000.47
+    },
+    {
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "My Four Wheels"
+      },
+      "contract_time": "full_time",
+      "longitude": -4.45847,
+      "latitude": 57.517601,
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/3701311756?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=5AAEF397326A6488C8B26E81F0BC90C913EA9D7C",
+      "contract_type": "permanent",
+      "salary_max": 29817.44,
+      "description": "My Four Wheels are on the lookout for people who are looking to start a new career as a Driving Instructor. No experience necessary as we provide full training. Once completed, you are then guaranteed a job with us in your area with earnings of \u00a327,000 - \u00a332,000 per year (dependant on how many hours you work). Due to the ever growing population in the UK, there is always a growing demand for more Driving Instructors year on year. It now takes the average learner driver 47 lessons to pass their \u2026",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiMzcwMTMxMTc1NiIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.UY-kndX5kJfwqK3p6XoudT3RQIUGfrHgFsK9D1Q9fkg",
+      "salary_is_predicted": "1",
+      "salary_min": 29817.44,
+      "category": {
+        "tag": "teaching-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Teaching Jobs"
+      },
+      "created": "2022-11-18T15:13:34Z",
+      "title": "Driving Instructor Trainee",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "Scotland", "Highland", "Muir Of Ord"],
+        "display_name": "Muir Of Ord, Highland"
+      },
+      "id": "3701311756"
+    },
+    {
+      "longitude": 1.15567,
+      "latitude": 52.059299,
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "My Four Wheels"
+      },
+      "contract_time": "full_time",
+      "description": "My Four Wheels are on the lookout for people who are looking to start a new career as a Driving Instructor. No experience necessary as we provide full training. Once completed, you are then guaranteed a job with us in your area with earnings of \u00a327,000 - \u00a332,000 per year (dependant on how many hours you work). Due to the ever growing population in the UK, there is always a growing demand for more Driving Instructors year on year. It now takes the average learner driver 47 lessons to pass their \u2026",
+      "salary_max": 27680.86,
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/3701311197?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=715F10E4E5BFF41BA06E9BB5954FEA4523E11921",
+      "salary_min": 27680.86,
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiIzNzAxMzExMTk3In0.mazOhlTkS1ewEP-wBFLodn-0zWTjnMUpZOIhk_Lgwv0",
+      "title": "Driving Instructor Trainee",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "area": ["UK", "Eastern England", "Suffolk", "Ipswich"],
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Ipswich, Suffolk"
+      },
+      "id": "3701311197",
+      "category": {
+        "tag": "teaching-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Teaching Jobs"
+      },
+      "created": "2022-11-18T15:13:31Z"
+    },
+    {
+      "salary_max": 38950.89,
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212191016?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=73B9467215370FA9C092C2481EFB04EB131AAD83",
+      "latitude": 51.405701,
+      "longitude": 0.01435,
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "contract_time": "full_time",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor (Training provided)",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "London", "South East London", "Bromley"],
+        "display_name": "Bromley, South East London"
+      },
+      "id": "4212191016",
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Logistics & Warehouse Jobs",
+        "tag": "logistics-warehouse-jobs"
+      },
+      "created": "2023-07-18T20:21:36Z",
+      "salary_min": 38950.89,
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjEyMTkxMDE2In0.woIxARdIawXuUFwKj2ZBUMlSXKyLyUn6FSLE65mpTG4",
+      "salary_is_predicted": "1"
+    },
+    {
+      "salary_max": 28306.48,
+      "description": "My Four Wheels are on the lookout for people who are looking to start a new career as a Driving Instructor. No experience necessary as we provide full training. Once completed, you are then guaranteed a job with us in your area with earnings of \u00a327,000 - \u00a332,000 per year (dependant on how many hours you work). Due to the ever growing population in the UK, there is always a growing demand for more Driving Instructors year on year. It now takes the average learner driver 47 lessons to pass their \u2026",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/3701310545?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=2D2583A9AAE5F7536C72FFF35B3DE67574E152EA",
+      "contract_type": "permanent",
+      "latitude": 50.762402,
+      "longitude": -1.29861,
+      "contract_time": "full_time",
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "My Four Wheels"
+      },
+      "id": "3701310545",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor Trainee",
+      "location": {
+        "display_name": "Cowes, Isle Of Wight",
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "South East England", "Isle Of Wight", "Cowes"]
+      },
+      "created": "2022-11-18T15:13:27Z",
+      "category": {
+        "tag": "teaching-jobs",
+        "label": "Teaching Jobs",
+        "__CLASS__": "Adzuna::API::Response::Category"
+      },
+      "salary_min": 28306.48,
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiMzcwMTMxMDU0NSIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.Wrtv4QDL5Aj1-j4-3l3x4MqEvv9HsidJufGXRbn0kBI",
+      "salary_is_predicted": "1"
+    },
+    {
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "My Four Wheels"
+      },
+      "contract_time": "full_time",
+      "longitude": -1.22914,
+      "latitude": 60.239399,
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212190715?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=45780BC501DE15722DBD78F51D3856D943E3EABB",
+      "salary_max": 39243.85,
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNDIxMjE5MDcxNSIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.Hjpmwu-1323-UWqhK21093dTlCUCi3eyZPj09SCQVMc",
+      "salary_is_predicted": "1",
+      "salary_min": 39243.85,
+      "category": {
+        "tag": "logistics-warehouse-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Logistics & Warehouse Jobs"
+      },
+      "created": "2023-07-18T20:21:33Z",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "Scotland", "Shetland Islands", "Girlsta"],
+        "display_name": "Girlsta, Shetland Islands"
+      },
+      "title": "Driving Instructor (Training provided)",
+      "id": "4212190715"
+    },
+    {
+      "latitude": 52.575802,
+      "longitude": -0.352947,
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "My Four Wheels"
+      },
+      "contract_time": "full_time",
+      "salary_max": 27726.15,
+      "description": "My Four Wheels are on the lookout for people who are looking to start a new career as a Driving Instructor. No experience necessary as we provide full training. Once completed, you are then guaranteed a job with us in your area with earnings of \u00a327,000 - \u00a332,000 per year (dependant on how many hours you work). Due to the ever growing population in the UK, there is always a growing demand for more Driving Instructors year on year. It now takes the average learner driver 47 lessons to pass their \u2026",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/3701309807?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=AF998D81FD3613DB8F15FCED5FDECF173AD1E47B",
+      "contract_type": "permanent",
+      "salary_min": 27726.15,
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiIzNzAxMzA5ODA3In0.aqMY7NfmgpD_oaDpa2q2LcYZnlVoO17IiAp27ALR8dE",
+      "salary_is_predicted": "1",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor Trainee",
+      "location": {
+        "area": ["UK", "Eastern England", "Peterborough", "Ailsworth"],
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Ailsworth, Peterborough"
+      },
+      "id": "3701309807",
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Teaching Jobs",
+        "tag": "teaching-jobs"
+      },
+      "created": "2022-11-18T15:13:23Z"
+    },
+    {
+      "created": "2022-11-18T15:13:31Z",
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Teaching Jobs",
+        "tag": "teaching-jobs"
+      },
+      "id": "3701311187",
+      "location": {
+        "area": [
+          "UK",
+          "South East England",
+          "Hampshire",
+          "Southampton",
+          "Hythe"
+        ],
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Hythe, Southampton"
+      },
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor Trainee",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiMzcwMTMxMTE4NyIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.ukjfQ4JCE4crNLbdsRqknsNrGOsEFT85n4M9eOHesh4",
+      "salary_is_predicted": "1",
+      "salary_min": 28961.86,
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/3701311187?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=418F85BEBEBB12527998D0AA0FC44663C7F8D4A8",
+      "salary_max": 28961.86,
+      "description": "My Four Wheels are on the lookout for people who are looking to start a new career as a Driving Instructor. No experience necessary as we provide full training. Once completed, you are then guaranteed a job with us in your area with earnings of \u00a327,000 - \u00a332,000 per year (dependant on how many hours you work). Due to the ever growing population in the UK, there is always a growing demand for more Driving Instructors year on year. It now takes the average learner driver 47 lessons to pass their \u2026",
+      "contract_time": "full_time",
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "My Four Wheels"
+      },
+      "latitude": 50.860298,
+      "longitude": -1.4016
+    },
+    {
+      "id": "3701312492",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor Trainee",
+      "location": {
+        "area": ["UK", "London", "North West London", "Swiss Cottage"],
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Swiss Cottage, North West London"
+      },
+      "created": "2022-11-18T15:13:38Z",
+      "category": {
+        "tag": "teaching-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Teaching Jobs"
+      },
+      "salary_min": 29664,
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiMzcwMTMxMjQ5MiIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.TTWQcNOv1zyWhnjV-yhFY7rslFhxvJbk1ZLPR9hk3LU",
+      "description": "My Four Wheels are on the lookout for people who are looking to start a new career as a Driving Instructor. No experience necessary as we provide full training. Once completed, you are then guaranteed a job with us in your area with earnings of \u00a327,000 - \u00a332,000 per year (dependant on how many hours you work). Due to the ever growing population in the UK, there is always a growing demand for more Driving Instructors year on year. It now takes the average learner driver 47 lessons to pass their \u2026",
+      "salary_max": 29664,
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/3701312492?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=D10638AA8475EA4C205D042435764EC88CED45F7",
+      "contract_type": "permanent",
+      "latitude": 51.543301,
+      "longitude": -0.174759,
+      "contract_time": "full_time",
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      }
+    },
+    {
+      "id": "4212192811",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "London", "North West London"],
+        "display_name": "North West London, London"
+      },
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor (Training provided)",
+      "created": "2023-07-18T20:21:57Z",
+      "category": {
+        "tag": "logistics-warehouse-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Logistics & Warehouse Jobs"
+      },
+      "salary_min": 39379.22,
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNDIxMjE5MjgxMSIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.yUa35U6Qx0pLrCdMmpv3DZeQgpfYrdJxn_y8U87Uurs",
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "salary_max": 39379.22,
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212192811?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=3B3A645451116518184297B326AC235C8967DF5F",
+      "latitude": 51.554658,
+      "longitude": -0.217687,
+      "contract_time": "full_time",
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      }
+    },
+    {
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212193209?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=58154BEE3C0EB4331ECC030A0353EA0B84941C4D",
+      "salary_max": 35375.47,
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "contract_time": "full_time",
+      "latitude": 53.390499,
+      "longitude": -4.31924,
+      "category": {
+        "tag": "logistics-warehouse-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Logistics & Warehouse Jobs"
+      },
+      "created": "2023-07-18T20:22:02Z",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor (Training provided)",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Penysarn, Isle Of Anglesey",
+        "area": ["UK", "Wales", "Isle Of Anglesey", "Penysarn"]
+      },
+      "id": "4212193209",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNDIxMjE5MzIwOSIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.s0HOxL8HaGQkBtCwS9cct5bbSx924XWgWq4FBSUJKPA",
+      "salary_is_predicted": "1",
+      "salary_min": 35375.47
+    },
+    {
+      "latitude": 51.549729,
+      "longitude": -3.578455,
+      "contract_time": "full_time",
+      "company": {
+        "display_name": "First Bus",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "salary_max": 26729.15,
+      "description": "Trainee & Experienced Bus Drivers We love welcoming new and experienced Bus Drivers to our team in Bridgend. Join us a Trainee or Experienced Driver and you will earn: \u00a312 per hour. This is a full-time contract working 30 hours per week. On top of your salary, there are some brilliant benefits. Our package helps your weekly wage go further, while providing long-term financial security. First Xclusives discount scheme: You and your family & friends can benefit from over 3,000 offers on high stre\u2026",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4187271087?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=ED691F7FE192BCC386061E54FD0216FC5E12FDE1",
+      "salary_min": 26729.15,
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MTg3MjcxMDg3In0.9XXeudBV1e2oSJHkpUv_MmLws4b_fH7d_cn6whNhtUg",
+      "salary_is_predicted": "1",
+      "id": "4187271087",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving",
+      "location": {
+        "area": ["UK", "Wales", "Bridgend County", "Bridgend", "Brynmenyn"],
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Brynmenyn, Bridgend"
+      },
+      "created": "2023-07-03T18:18:13Z",
+      "category": {
+        "label": "Logistics & Warehouse Jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "tag": "logistics-warehouse-jobs"
+      }
+    },
+    {
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjEyMTkwOTc1In0.BN00mPqv5vs6qTd_bjMTlEaSO-IPfO_u8JXvwIYYe4s",
+      "salary_is_predicted": "1",
+      "salary_min": 36320.98,
+      "category": {
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Logistics & Warehouse Jobs",
+        "tag": "logistics-warehouse-jobs"
+      },
+      "created": "2023-07-18T20:21:36Z",
+      "location": {
+        "display_name": "Cattedown, Plymouth",
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "area": ["UK", "South West England", "Plymouth", "Cattedown"]
+      },
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "title": "Driving Instructor (Training provided)",
+      "id": "4212190975",
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "contract_time": "full_time",
+      "latitude": 50.3699,
+      "longitude": -4.12763,
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212190975?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=38073830E10438D3A78940CF6BE769DFC756A6BC",
+      "salary_max": 36320.98,
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026"
+    },
+    {
+      "id": "3701310797",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "area": ["UK", "Scotland", "Renfrewshire", "Erskine"],
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Erskine, Renfrewshire"
+      },
+      "title": "Driving Instructor Trainee",
+      "created": "2022-11-18T15:13:29Z",
+      "category": {
+        "tag": "teaching-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Teaching Jobs"
+      },
+      "salary_min": 28525.31,
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiMzcwMTMxMDc5NyIsInMiOiJQb1g0Wnp3dDdoR3BINWRIbWpBXzRRIn0.qbQC4fovh_kJFqmUAdI2uZ3jk0JDZsjYU7mbdhr56sM",
+      "description": "My Four Wheels are on the lookout for people who are looking to start a new career as a Driving Instructor. No experience necessary as we provide full training. Once completed, you are then guaranteed a job with us in your area with earnings of \u00a327,000 - \u00a332,000 per year (dependant on how many hours you work). Due to the ever growing population in the UK, there is always a growing demand for more Driving Instructors year on year. It now takes the average learner driver 47 lessons to pass their \u2026",
+      "salary_max": 28525.31,
+      "contract_type": "permanent",
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/3701310797?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=0444D5BB39833085DE82E4EE159E054A15094722",
+      "longitude": -4.46215,
+      "latitude": 55.900101,
+      "contract_time": "full_time",
+      "company": {
+        "__CLASS__": "Adzuna::API::Response::Company",
+        "display_name": "My Four Wheels"
+      }
+    },
+    {
+      "contract_time": "full_time",
+      "company": {
+        "display_name": "My Four Wheels",
+        "__CLASS__": "Adzuna::API::Response::Company"
+      },
+      "longitude": -0.24465,
+      "latitude": 52.638802,
+      "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/4212192897?se=PoX4Zzwt7hGpH5dHmjA_4Q&utm_medium=api&utm_source=35dc927c&v=801094AACA20A964FC0DCFBC9C468E027E21F120",
+      "contract_type": "permanent",
+      "description": "My Four Wheels are looking to expand our team and are recruiting both part time and full time Driving Instructors throughout the UK. Around 1.6 million people take their driving test every year, teaching people how to drive is not only an industry proof profession but one which grows every day due to the expanding population of the UK. Each driving instructor work within their local area, work the hours which suit them (Monday - Sunday) and get their very own branded car complete with duel cont\u2026",
+      "salary_max": 38315.57,
+      "salary_is_predicted": "1",
+      "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUG9YNFp6d3Q3aEdwSDVkSG1qQV80USIsImkiOiI0MjEyMTkyODk3In0.KuNi7E-EJunQjKX9gKG5aD42Azsrnh7r-6iQazU84xE",
+      "salary_min": 38315.57,
+      "created": "2023-07-18T20:21:58Z",
+      "category": {
+        "tag": "logistics-warehouse-jobs",
+        "__CLASS__": "Adzuna::API::Response::Category",
+        "label": "Logistics & Warehouse Jobs"
+      },
+      "id": "4212192897",
+      "__CLASS__": "Adzuna::API::Response::Job",
+      "location": {
+        "__CLASS__": "Adzuna::API::Response::Location",
+        "display_name": "Milking Nook, Peterborough",
+        "area": ["UK", "Eastern England", "Peterborough", "Milking Nook"]
+      },
+      "title": "Driving Instructor (Training provided)"
+    }
+  ],
+  "__CLASS__": "Adzuna::API::Response::JobSearchResults"
+}
