@@ -1,8 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { addContact } from '../services/api'
+import Success from '../components/Success'
 
 function Contact() {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [showSuccess, setShowSuccess] = useState(false)
+  const [required, setRequired] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (name && email && message) {
+      addContact(name, email, message)
+        .then((response) => {
+          console.log(response)
+          setShowSuccess(true)
+          setTimeout(() => {
+            setShowSuccess(false)
+          }, 2000)
+          setName("")
+          setEmail("")
+          setMessage("")
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+        setRequired(false)
+    } else {
+      setRequired(true)
+    }
+  }
   return (
     <>
       <Navbar />
@@ -20,7 +50,7 @@ function Contact() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4 bg-gray-900 text-white p-8 md:h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4 bg-gray-900 text-white p-8">
           <div className="flex flex-col items-center">
             <h1 className="font-bold text-2xl md:text-4xl mb-4 text-white">Get in Touch</h1>
             <p className="mb-4 w-11/12 md:w-1/2 text-center">Do you have any inquiry or question? Our team is ready to assist you</p>
@@ -30,6 +60,8 @@ function Contact() {
                 type="text"
                 name="firstAndLastName"
                 id="firstAndLastName"
+                value={name}
+                onChange={e => setName(e.target.value)}
                 className="border rounded mb-6 w-full h-12 text-black p-3 outline-none"
               />
               <label htmlFor="email" className="mb-2">Email:</label>
@@ -37,11 +69,22 @@ function Contact() {
                 type="email"
                 name="email"
                 id="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
                 className="border rounded mb-6 w-full h-12 text-black p-3 outline-none"
               />
               <label htmlFor="firstAndLastName" className="mb-2">How can we help?</label>
-              <textarea name="message" id="message" cols="30" rows="6" className="border w-full mb-6 text-black p-3 rounded outline-none" />
-              <button type="submit" className="mt-4 bg-[#F4ECC2] text-black h-12 hover:bg-[#b3a978] hover:text-white rounded">SUBMIT</button>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="6"
+                value={message}
+                className="border w-full mb-6 text-black p-3 rounded outline-none"
+                onChange={e => setMessage(e.target.value)}
+              />
+              {required && <p className='text-red-500'>All fields are required *</p>}
+              <button onClick={(e) => handleSubmit(e)} type="submit" className="mt-4 bg-[#F4ECC2] text-black h-12 hover:bg-[#e9dea9] hover:text-white rounded outline-none focus:outline-none">SUBMIT</button>
             </form>
           </div>
           <div>
@@ -58,6 +101,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      {showSuccess && <Success />}
       <Footer />
     </>
   )
