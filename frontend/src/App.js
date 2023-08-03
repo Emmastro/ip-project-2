@@ -11,7 +11,6 @@ import JobCategoriesExp from "./views/jobcategoriesExp";
 import JobsMap from "./views/map"
 import mapExp from "./views/mapExp";
 import About from "./views/About.js";
-import Authors from "./views/Authors.js";
 import Register from "./views/Register.js";
 import Contact from "./views/Contact";
 import Blog from "./views/Blog";
@@ -28,12 +27,10 @@ function App() {
         <Route path="/jobsonmap" element={<JobsMap />} />
         <Route path="/mapexp" element={<mapExp />} />
         <Route path="/about" element={<About />} />
-        <Route path="/authors" element={<Authors/>} />
         <Route path="/register" element={<Register />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
-
       </Routes>
     </BrowserRouter>
   );
