@@ -22,8 +22,9 @@ function Authors() {
       interest:
         "I am interested in Distributed Ledger Systems, Artificial Intelligence, Augmented Reality and Quantum Computing",
       contribution:
-        "Integral backend contributor, skillfully crafted API-driven visualizations for the website application, enhancing user experience",
-      others: "I write poems and fight crime (bugs)",
+        "I helped make the visualizations from the data fetched through the API",
+      others:
+        "I write poems and fight crime (bugs)",
     },
     {
       url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
@@ -47,14 +48,14 @@ function Authors() {
         "Exploring diverse cultures and understanding their significance is a source of great fascination for me. I appreciate how culture shapes societies, influences art, and fosters unique perspectives on life.",
     },
     {
-      url: "../images/Justus.jpg",
+      url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
       name: "Justus Chemirmir",
       interest:
-        "I enjoy creating engaging and interactive animations or interactions on websites to enhance the user experience.",
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       contribution:
-        "Worked on the frontend development of the project. My contributions extended to meticulously designing the website with high fidelity and building both the 'Contact Us' and 'Blog' pages",
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       others:
-        "I love to study the principles of typography for the web and how to use fonts effectively to improve readability and design aesthetics.",
+        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
     {
       url: "../images/mussie.jpg",

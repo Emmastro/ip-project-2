@@ -54,7 +54,7 @@ const Home = () => {
 
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 mb-12 lg:px-24">
           <div className="p-3">
-            <img src="../images/choose us.jpg" width={500} height={500} />
+            <img src="../images/choose us.jpg" width={200} height={200} />
           </div>
           <div className="p-3">
             <h2 className="text-2xl pb-3">Why Choose Us</h2>

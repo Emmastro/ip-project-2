@@ -12,6 +12,7 @@ import About from "./views/About.js";
 import Register from "./views/Register.js";
 import Contact from "./views/Contact";
 import Blog from "./views/Blog";
+import Read from "./views/Read";
 import Tutorial from "./views/Tutorial";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<Read />} />
       </Routes>
     </BrowserRouter>
   );
