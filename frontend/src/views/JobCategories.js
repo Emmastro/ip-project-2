@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import SalaryHistoryChart from "../components/SalaryHistoryChart";
 import { Bar, PolarArea, Scatter, HorizontalBar, Doughnut } from 'react-chartjs-2';
 import {
   REACT_APP_LOAD, BASE_URL, URL_CREDENTIALS
@@ -95,7 +94,6 @@ sortedData.sort((a, b) => b.averageSalary - a.averageSalary);
 };
 
 const JobCategories = () => {
-  const [salaryHistoryData, setJobData] = useState(null);
   const [searchData, setSearchData] = useState(null);
 
   const handleSubmit = async (event) => {
@@ -108,19 +106,10 @@ const JobCategories = () => {
     let endpoint = "/cached_responses/search_results.json";
 
     if (REACT_APP_LOAD === "live") {
-      endpoint = `${BASE_URL}/${location}/history?${URL_CREDENTIALS}&category=${jobCategory}`;
+      endpoint = `${BASE_URL}/${location}/search?${URL_CREDENTIALS}&results_per_page=30`;
     }
 
-    // Salary history
-    // API endpoint: http://api.adzuna.com/v1/api/jobs/gb/history?app_id={APP_ID}&app_key={API_KEY}&location0=UK&location1=London&category=it-jobs&content-type=application/json
-    const responseHistory = await fetch("/cached_responses/salary_history_uk.json", {
-      method: "GET",
-    })
-      .then((response) => response.json())
-      .catch((error) => console.error(error));
-
-    console.log("Response:", responseHistory);
-    setJobData(responseHistory);
+    console.log('fetching from endpoint: ', endpoint);
 
     // Search results
     const responseSearch = await fetch(
@@ -238,13 +227,13 @@ const JobCategories = () => {
       </section>
 
       <section className="map">
-        <div className="flex">
-        <a href="/jobcategoriesExp">
-           <div className="basis-1/2">
+        <div className="container flex">
+        <a href="//job-categories-exp">
+           <div>
             <h2>Number of Jobs in each Category</h2>
             {searchData && <Doughnut data={createDoughnutChartData(searchData)} />}
           </div>
-          <div className="basis-1/2 container mx-auto">
+          <div>
             <h2>Average Salary in each Category</h2>
             {searchData && <Bar data={createHorizontalBarChartData(searchData)}
             options={{
