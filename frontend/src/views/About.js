@@ -151,7 +151,7 @@ function Authors() {
             style={{ backgroundImage: `url(${teams[currentIndex].url})` }}
             className="w-[70%] h-[70%] rounded-2xl bg-center bg-cover duration-500"
           ></div>
-          <div className="text-center mt-4 text-2xl font-bold">
+          <div className="text-center py-4 text-2xl font-bold">
             {teams[currentIndex].name}
           </div>
           {/* Left Arrow */}
@@ -162,9 +162,20 @@ function Authors() {
           <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-8 text-2xl rounded-full p-1 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactRight onClick={nextSlide} size={30} />
           </div>
+          <div className="flex top-4 justify-center py-2">
+            {teams.map((slide, slideIndex) => (
+              <div
+                key={slideIndex}
+                onClick={() => goToSlide(slideIndex)}
+                className="text-2xl cursor-pointer"
+              >
+                <RxDotFilled />
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 text-center w-4/5 mx-auto">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-12 text-center w-4/5 mx-auto">
           <div>
             <p className="text-black text-2xl">Interest</p>
             <p className="py-4 leading-8">{teams[currentIndex].interest}</p>
@@ -177,18 +188,6 @@ function Authors() {
             <p className="text-black text-2xl">Others</p>
             <p className="py-4 leading-8">{teams[currentIndex].others}</p>
           </div>
-        </div>
-
-        <div className="flex justify-center py-3 text-gray-900">
-          {teams.map((slide, slideIndex) => (
-            <div
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-              className="text-2xl cursor-pointer"
-            >
-              <RxDotFilled />
-            </div>
-          ))}
         </div>
       </div>
       <Footer />
