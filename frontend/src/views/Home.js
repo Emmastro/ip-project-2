@@ -115,24 +115,9 @@ const Home = () => {
             </div>
             <a
               href="/blog"
-              className="flex justify-between items-center relative rounded h-15 w-32 p-2 text-[#F4ECC2] text-center bg-gray-900"
+              className="rounded h-15 w-32 p-2 text-[#F4ECC2] text-center bg-gray-900"
             >
-              <div>Go To Blogs</div>
-              <svg
-                className="text-[#F4ECC2] w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-2 h-2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                />
-              </svg>
+              Go To Blogs
             </a>
           </div>
         </div>

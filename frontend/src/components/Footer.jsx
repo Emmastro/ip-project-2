@@ -14,19 +14,17 @@ const Footer = () => {
           <h1 className='font-semibold'>Search Trending</h1>
           <p className='text-gray-600'>Web Design</p>
           <p className='text-gray-600'>Graphic Design</p>
-          <p className='text-gray-600'>Python</p>
         </div>
         <div>
           <h1 className='font-semibold'>Company</h1>
-          <p className='text-gray-600'>Our Team</p>
-          <p className='text-gray-600'>Job Categories</p>
-          <p className='text-gray-600'>Reach Out</p>
+          <p className='text-gray-600'><a href="/about">Our Team</a></p>
+          <p className='text-gray-600'><a href="/job-categories">Job Categories</a></p>
+          
         </div>
         <div>
           <h1 className='font-semibold'>Support</h1>
-          <p className='text-gray-600'>Tutorials</p>
-          <p className='text-gray-600'>Privacy</p>
-          <p className='text-gray-600'>Terms of Service</p>
+          <p className='text-gray-600'><a href="">Tutorials</a></p>
+          <p className='text-gray-600'><a href="/contact">Reach Out</a></p>
         </div>
       </div>
       <div>
