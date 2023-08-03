@@ -25,13 +25,13 @@ const SalaryHistoryChart = (salaryHistoryData) => {
       // Process the data from the JSON file into chart-friendly format
       const labels = Object.keys(salaryHistoryData.month);
       const data = Object.values(salaryHistoryData.month);
-      const country = Object.values(salaryHistoryData.location.display_name);
+      //const country = Object.values(salaryHistoryData.location.display_name);
 
       setChartData({
         labels,
         datasets: [
           {
-            label: "Average Salary in " + country,
+            label: "Average Salary in ", // + country,
             data,
             fill: true,
             responsive: true,
