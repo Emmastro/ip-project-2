@@ -91,10 +91,10 @@ function Authors() {
     <>
       <Navbar />
       <div>
-        <div className="w-full h-screen bg-[url('../public/teams.jpg')] bg-cover bg-no-repeat bg-fixed relative">
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-12 absolute top-[70%] text-center translate-x-[-50%] left-[50%] w-4/5">
-            <div className="bg-[#F4ECC2] h-[23em] w-[20em] p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
-              <h1 className="text-sm font-semibold py-4 text-3xl">
+        <div className="w-full lg:h-screen bg-[url('../public/teams.jpg')] bg-cover bg-no-repeat bg-center bg-fixed relative">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 lg:absolute lg:top-[70%] text-center lg:translate-x-[-50%] lg:left-[50%] lg:w-4/5 pt-48 lg:pt-0 pb-16 lg:pb-0">
+            <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em] p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+              <h1 className="text-sm font-semibold py-4">
                 Our Approach
               </h1>
               <p className="font-light">
@@ -110,8 +110,8 @@ function Authors() {
                 <li>Data Accuracy and Timeliness</li>
               </ul>
             </div>
-            <div className="bg-[#F4ECC2] h-[23em] w-[20em] p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
-              <h1 className="text-sm font-semibold py-4 text-3xl">
+            <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em] p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+              <h1 className="text-sm font-semibold py-4">
                 Our Mission
               </h1>
               <p className="font-light">
@@ -125,8 +125,8 @@ function Authors() {
                 greater transparency in the world of work.
               </p>
             </div>
-            <div className="bg-[#F4ECC2] h-[23em] w-[20em]  p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
-              <h1 className="text-sm font-semibold py-4 text-3xl">
+            <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em]  p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+              <h1 className="text-sm font-semibold py-4">
                 Our Service
               </h1>
               <p className="font-light">
@@ -144,7 +144,7 @@ function Authors() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center max-w-[800px] h-[800px] w-full mx-auto mt-48 py-10 px-4 relative group">
+        <div className="flex flex-col items-center max-w-[800px] h-[800px] w-full mx-auto lg:mt-48 pt-10 px-4 relative group">
           <h1 className="mb-5 text-xl w-2/3 md:w-full text-center font-medium md:font-normal md:text-3xl">
             Meet The Team
           </h1>
