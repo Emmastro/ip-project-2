@@ -7,18 +7,6 @@ import {
   REACT_APP_LOAD, BASE_URL, URL_CREDENTIALS
 } from "../constants";
 
-const createDoughnutChartData = (data) => {
-  return {
-    labels: ["Permanent"],
-    datasets: [
-      {
-        data: [2],
-        backgroundColor: ["#FF6384"],
-      },
-    ],
-  };
-};
-
 const createBarChartData = (data) => {
   // Your logic to extract data for Bar Chart
   console.log("createBarChartData: ", data);

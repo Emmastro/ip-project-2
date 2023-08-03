@@ -3,6 +3,9 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import SalaryHistoryChart from "../components/SalaryHistoryChart";
 import { Bar, PolarArea, Scatter, HorizontalBar, Doughnut } from 'react-chartjs-2';
+import {
+  REACT_APP_LOAD, BASE_URL, URL_CREDENTIALS
+} from "../constants";
 
 
 // Function to generate an array of random colors
@@ -99,6 +102,14 @@ const JobCategories = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const jobTitle = formData.get("jobtitle");
+    const jobCategory = formData.get("jobcategory");
+    const location = formData.get("location");
+
+    let endpoint = "/cached_responses/search_results.json";
+
+    if (REACT_APP_LOAD === "live") {
+      endpoint = `${BASE_URL}/${location}/history?${URL_CREDENTIALS}&category=${jobCategory}`;
+    }
 
     // Salary history
     // API endpoint: http://api.adzuna.com/v1/api/jobs/gb/history?app_id={APP_ID}&app_key={API_KEY}&location0=UK&location1=London&category=it-jobs&content-type=application/json
@@ -112,8 +123,14 @@ const JobCategories = () => {
     setJobData(responseHistory);
 
     // Search results
-    const responseSearch = await fetch("/cached_responses/search_results.json", {
+    const responseSearch = await fetch(
+      endpoint,
+      {
       method: "GET",
+      mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
   }).then((response) => response.json())
   .catch((error) => console.error(error));
 
