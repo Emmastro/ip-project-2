@@ -59,7 +59,7 @@ function Blog() {
                             style={{ textDecoration: 'none' }}
                             key={blog.id}
                         >
-                            <div className="p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+                            <div className="p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out h-full">
                                 <img src={pictures[index]} width={500} height={500} />
                                 <h1 className="text-sm font-semibold text-zinc-500 mt-3 mb-1">{blog.author} - { formatDate((blog.created_at).slice(0, 10))}</h1>
                                 <h2 className="text-sm font-semibold pt-2">{blog.title}</h2>
