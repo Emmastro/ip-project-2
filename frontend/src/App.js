@@ -32,6 +32,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<Read />} />
       </Routes>
     </BrowserRouter>
   );

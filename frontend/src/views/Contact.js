@@ -20,7 +20,7 @@ function Contact() {
           setShowSuccess(true)
           setTimeout(() => {
             setShowSuccess(false)
-          }, 1000)
+          }, 2000)
           setName("")
           setEmail("")
           setMessage("")
@@ -60,6 +60,7 @@ function Contact() {
                 type="text"
                 name="firstAndLastName"
                 id="firstAndLastName"
+                value={name}
                 onChange={e => setName(e.target.value)}
                 className="border rounded mb-6 w-full h-12 text-black p-3 outline-none"
               />
@@ -68,6 +69,7 @@ function Contact() {
                 type="email"
                 name="email"
                 id="email"
+                value={email}
                 onChange={e => setEmail(e.target.value)}
                 className="border rounded mb-6 w-full h-12 text-black p-3 outline-none"
               />
@@ -77,11 +79,12 @@ function Contact() {
                 id="message"
                 cols="30"
                 rows="6"
+                value={message}
                 className="border w-full mb-6 text-black p-3 rounded outline-none"
                 onChange={e => setMessage(e.target.value)}
               />
               {required && <p className='text-red-500'>All fields are required *</p>}
-              <button onClick={(e) => handleSubmit(e)} type="submit" className="mt-4 bg-[#F4ECC2] text-black h-12 hover:bg-[#b3a978] hover:text-white rounded">SUBMIT</button>
+              <button onClick={(e) => handleSubmit(e)} type="submit" className="mt-4 bg-[#F4ECC2] text-black h-12 hover:bg-[#e9dea9] hover:text-white rounded outline-none focus:outline-none">SUBMIT</button>
             </form>
           </div>
           <div>
