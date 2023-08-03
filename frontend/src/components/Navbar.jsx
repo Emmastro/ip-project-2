@@ -1,29 +1,47 @@
-import React, { useState } from 'react'
 
+import React from "react";
 
-function Navbar() {
-  const [navbar, setNavbar] = useState(false)
+export default function Navbar() {
+  const [navbar, setNavbar] = React.useState(false);
   return (
-    <header class="site-navbar mt-3">
-      <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="site-logo col-6"><a href="/">JobData</a></div>
-
-          <nav class="mx-auto site-navigation">
-            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-              <li><a href="/" class="nav-link active">Home</a></li>
-              <li><a href="/APIPage1">Salary History</a></li>
-              <li><a href="/jobcategories">Job categories</a></li>
-              <li><a href="/about">About Us</a></li>             
-              <li><a href="/jobsonmap">Jobs on Map</a></li>          
-              <li><a href="/contact">Contact Us</a></li>
-              <li><a href="/blog">Blog</a></li>
+    <>
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-900">
+        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+            <a
+              className="text-xl font-medium leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+              style={{textDecoration: 'none'}}
+              href="/"
+            >
+              JOB DATA
+            </a>
+            <button
+              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              type="button"
+              onClick={() => setNavbar(!navbar)}
+            >
+              <i className="fas fa-bars"></i>
+            </button>
+          </div>
+          <div
+            className={
+              "lg:flex flex-grow items-center" +
+              (navbar ? " flex" : " hidden")
+            }
+            id="navbar"
+          >
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+              <li><a href="/" className="nav-link hover:text-white">Home</a></li>
+              <li><a href="/APIPage1" className="nav-link hover:text-white">Salary History</a></li>
+              <li><a href="/jobcategories" className="nav-link hover:text-white">Job categories</a></li>
+              <li><a href="/about" className="nav-link hover:text-white">About Us</a></li>             
+              <li><a href="/jobsonmap" className="nav-link hover:text-white">Jobs on Map</a></li>
+              <li><a href="/contact" className="nav-link hover:text-white">Contact Us</a></li>
+              <li><a href="/blog" className="nav-link hover:text-white">Blog</a></li>
             </ul>
-          </nav>
+          </div>
         </div>
-      </div>
-    </header>
+      </nav>
+    </>
   );
 }
-
-export default Navbar
