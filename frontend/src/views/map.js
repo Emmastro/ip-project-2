@@ -46,9 +46,8 @@ const JobsMap = () => {
               Page, where careers know no boundaries!
             </p>
             <p className="font-light leading-8 mt-2">
-              The Jobs on Maps page is a geographical expedition that allows you
-              to explore job opportunities across the globe visually. Here's
-              what unfolds:
+              The page is a geographical expedition that allows you to explore
+              job opportunities across the globe visually. Here's what unfolds:
             </p>
             <p className="font-light mt-2 leading-8">
               Type in your dream job and initiate the expedition. The map
