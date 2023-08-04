@@ -10,7 +10,6 @@ import {
   countryOptions,
 } from "../constants";
 
-
 const createDoughnutChartData = (data) => {
   return {
     labels: ["Permanent"],
@@ -44,15 +43,17 @@ const SalaryHistory = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [location, setLocation] = useState("us");
   const [jobCategories, setJobCategories] = useState([]);
+  const [isSalaryHistoryLoading, setIsSalaryHistoryLoading] = useState(true);
+  const [isSearchDataLoading, setIsSearchDataLoading] = useState(true);
 
   const searchJobCategory = async (jobCategory) => {
-
+    setIsSalaryHistoryLoading(true);
+    setIsSearchDataLoading(true);
     let endpoint = "/cached_responses/salary_history.json";
 
     // http://api.adzuna.com/v1/api/jobs/gb/search/1?app_id={YOUR API ID}&app_key={YOUR API KEY}&results_per_page=20&what=javascript%20developer&content-type=application/json
     // select item with class jobCategory
 
-    
     if (REACT_APP_LOAD === "live") {
       endpoint = `${BASE_URL}/${location}/history?${URL_CREDENTIALS}&category=${jobCategory}`;
     }
@@ -68,8 +69,9 @@ const SalaryHistory = () => {
       .then((response) => response.json())
       .catch((error) => console.error(error));
 
-    console.log("responseHistory:", responseHistory);
+    
     setJobData(responseHistory);
+    setIsSalaryHistoryLoading(false);
 
     endpoint = "/cached_responses/search_results.json";
 
@@ -87,12 +89,12 @@ const SalaryHistory = () => {
       .then((response) => response.json())
       .catch((error) => console.error(error));
 
-    console.log("Response:", responseSearch);
+
     setSearchData(responseSearch);
+    setIsSearchDataLoading(false);
   };
 
- 
-  const handleLocationChange = async(event) => {
+  const handleLocationChange = async (event) => {
     setLocation(event.target.value);
     // Populate categories supported for this country
     let endpoint = "/cached_responses/job_categories.json";
@@ -100,29 +102,25 @@ const SalaryHistory = () => {
       endpoint = `${BASE_URL}/${location}/categories?${URL_CREDENTIALS}`;
     }
 
-    const categories = await fetch(
-      endpoint,
-      {
+    const categories = await fetch(endpoint, {
       method: "GET",
       mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-  }).then((response) => response.json())
-  .catch((error) => console.error(error));
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .catch((error) => console.error(error));
 
-  console.log("Response:", categories);
-  setJobCategories(categories.results);
-
+    setJobCategories(categories.results);
+    
   };
-
 
   const handleCategoryChange = (event) => {
-    console.log("category change: ", event.target)
+  
     setSelectedCategory(event.target.value);
-    searchJobCategory(event.target.value)
+    searchJobCategory(event.target.value);
   };
-
 
   const RadioGroup = ({ options, selectedOption, onChange }) => {
     if (options.length === 0) {
@@ -132,23 +130,23 @@ const SalaryHistory = () => {
     return (
       <div className="flex items-center space-x-4">
         <div className="max-h-64 overflow-y-auto">
-        {options.map((option) => (
-          <label
-            key={option.tag}
-            className="flex items-center cursor-pointer"
-          >
-            <input
-            name="jobCategory"
-              type="radio"
-              value={option.tag}
-              checked={selectedOption === option.tag}
-              onChange={(event) => onChange(event)}
-              className="form-radio h-4 w-4 text-indigo-600"
-            />
-            <span className="ml-2 text-gray-700">{option.label}</span>
-          </label>
-        ))}
-      </div>
+          {options.map((option) => (
+            <label
+              key={option.tag}
+              className="flex items-center cursor-pointer"
+            >
+              <input
+                name="jobCategory"
+                type="radio"
+                value={option.tag}
+                checked={selectedOption === option.tag}
+                onChange={(event) => onChange(event)}
+                className="form-radio h-4 w-4 text-indigo-600"
+              />
+              <span className="ml-2 text-gray-700">{option.label}</span>
+            </label>
+          ))}
+        </div>
       </div>
     );
   };
@@ -190,13 +188,16 @@ const SalaryHistory = () => {
                   </select>
                 </div>
                 <div class="row">
-                  <h1 className="text-2xl font-bold mb-4">Select a job category:</h1>
-                  {jobCategories.length > 0 && <RadioGroup
-                    options={jobCategories}
-                    selectedOption={selectedCategory}
-                    onChange={handleCategoryChange}
-                  />}
-                  
+                  <h1 className="text-2xl font-bold mb-4">
+                    Select a job category:
+                  </h1>
+                  {jobCategories.length > 0 && (
+                    <RadioGroup
+                      options={jobCategories}
+                      selectedOption={selectedCategory}
+                      onChange={handleCategoryChange}
+                    />
+                  )}
                 </div>
               </form>
             </div>
@@ -208,16 +209,24 @@ const SalaryHistory = () => {
         <a href="APIPageExp">
           <div className="flex">
             <div className="basis-1/2">
-              {salaryHistoryData && (
-                <SalaryHistoryChart {...salaryHistoryData} />
+              {isSalaryHistoryLoading ? (
+                <p>Loading salary history chart...</p>
+              ) : (
+                salaryHistoryData && (
+                  <SalaryHistoryChart {...salaryHistoryData} />
+                )
               )}
             </div>
             <div className="basis-1/2">
-              {searchData && (
-                <>
-                  <h2>Comparison of Mean Salary and Maximum Salaries</h2>
-                  <Bar data={createBarChartData(searchData)} />
-                </>
+              {isSearchDataLoading ? (
+                <p>Loading chart ...</p>
+              ) : (
+                searchData && (
+                  <>
+                    <h2>Comparison of Mean Salary and Maximum Salaries</h2>
+                    <Bar data={createBarChartData(searchData)} />
+                  </>
+                )
               )}
             </div>
           </div>

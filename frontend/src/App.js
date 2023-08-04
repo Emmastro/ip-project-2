@@ -14,7 +14,7 @@ import Contact from "./views/Contact";
 import Blog from "./views/Blog";
 import Read from "./views/Read";
 import Tutorial from "./views/Tutorial";
-import mapExp from "./views/mapExp";
+import MapExp from "./views/mapExp";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<Read />} />
-        <Route path="/map-exp" element={<mapExp />} />
+        <Route path="/map-exp" element={<MapExp />} />
       </Routes>
     </BrowserRouter>
   );

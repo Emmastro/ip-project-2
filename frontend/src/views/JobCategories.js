@@ -28,7 +28,7 @@ const getRandomColor = () => {
 
 const createDoughnutChartData = (data) => {
   
-  const jobCategories = data.results.map((job) => job?.label);
+  const jobCategories = data.results.map((job) => job.category.label);
   const categoryCounts = jobCategories.reduce((acc, category) => {
     acc[category] = (acc[category] || 0) + 1;
     return acc;
@@ -50,8 +50,7 @@ const createDoughnutChartData = (data) => {
 const groupDataByCategory = (data) => {
   const groupedData = {};
   data.results.forEach((result) => {
-    console.log("result: ", result);
-    const categoryLabel = result?.label;
+    const categoryLabel = result.category.label;
     if (!groupedData[categoryLabel]) {
       groupedData[categoryLabel] = {
         salarySum: 0,
@@ -63,16 +62,16 @@ const groupDataByCategory = (data) => {
   });
 
   const labels = Object.keys(groupedData);
+  console.log("groupedData", groupedData)
   const averageSalaries = labels.map((label) => groupedData[label].salarySum / groupedData[label].count);
 
   return { labels, averageSalaries };
 };
 
 const createHorizontalBarChartData = (job) => {
-  // Your logic to extract data for Horizontal Bar Chart
-  // Example:
-  const { labels, averageSalaries } = groupDataByCategory(job)
 
+  const { labels, averageSalaries } = groupDataByCategory(job)
+  console.log("labels, averageSalaries : ", labels, averageSalaries )
  // Sort the data from highest to lowest average salary
  const sortedData = labels.map((label) => {
   return {
@@ -105,7 +104,7 @@ const JobCategories = () => {
     let endpoint = "/cached_responses/search_results.json";
 
     if (REACT_APP_LOAD === "live") {
-      endpoint = `${BASE_URL}/${location}/categories?${URL_CREDENTIALS}`;
+      endpoint = `${BASE_URL}/${location}/search?${URL_CREDENTIALS}&results_per_page=30`;
     }
 
     const responseSearch = await fetch(
@@ -118,8 +117,6 @@ const JobCategories = () => {
         },
   }).then((response) => response.json())
   .catch((error) => console.error(error));
-
-    console.log("Response:", responseSearch);
     setSearchData(responseSearch);
   };
 
