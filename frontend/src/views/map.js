@@ -147,6 +147,7 @@ const JobsMap = () => {
           </div>
         </div>
       </section>
+      <a href="/map-exp" className='rounded w-2/5 md:w-1/5 p-2 text-[#F4ECC2] text-center my-6 bg-gray-900'>Learn More</a>
     <div className="flex items-center justify-center">
         {searchData ? <SalaryCharts jobs={searchData.results} /> : <div>Loading...</div>}
     </div>
