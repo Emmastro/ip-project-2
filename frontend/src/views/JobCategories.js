@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import SalaryHistoryChart from "../components/SalaryHistoryChart";
-import { Bar, PolarArea, Scatter, HorizontalBar, Doughnut } from 'react-chartjs-2';
+import { Bar, Doughnut } from 'react-chartjs-2';
+import {
+  REACT_APP_LOAD, BASE_URL, URL_CREDENTIALS
+} from "../constants";
 
 
 // Function to generate an array of random colors
@@ -26,7 +28,7 @@ const getRandomColor = () => {
 
 const createDoughnutChartData = (data) => {
   
-  const jobCategories = data.results.map((job) => job.category.label);
+  const jobCategories = data.results.map((job) => job?.label);
   const categoryCounts = jobCategories.reduce((acc, category) => {
     acc[category] = (acc[category] || 0) + 1;
     return acc;
@@ -48,7 +50,8 @@ const createDoughnutChartData = (data) => {
 const groupDataByCategory = (data) => {
   const groupedData = {};
   data.results.forEach((result) => {
-    const categoryLabel = result.category.label;
+    console.log("result: ", result);
+    const categoryLabel = result?.label;
     if (!groupedData[categoryLabel]) {
       groupedData[categoryLabel] = {
         salarySum: 0,
@@ -92,28 +95,27 @@ sortedData.sort((a, b) => b.averageSalary - a.averageSalary);
 };
 
 const JobCategories = () => {
-  const [salaryHistoryData, setJobData] = useState(null);
   const [searchData, setSearchData] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const jobTitle = formData.get("jobtitle");
+    const location = formData.get("location");
 
-    // Salary history
-    // API endpoint: http://api.adzuna.com/v1/api/jobs/gb/history?app_id={APP_ID}&app_key={API_KEY}&location0=UK&location1=London&category=it-jobs&content-type=application/json
-    const responseHistory = await fetch("/cached_responses/salary_history_uk.json", {
+    let endpoint = "/cached_responses/search_results.json";
+
+    if (REACT_APP_LOAD === "live") {
+      endpoint = `${BASE_URL}/${location}/categories?${URL_CREDENTIALS}`;
+    }
+
+    const responseSearch = await fetch(
+      endpoint,
+      {
       method: "GET",
-    })
-      .then((response) => response.json())
-      .catch((error) => console.error(error));
-
-    console.log("Response:", responseHistory);
-    setJobData(responseHistory);
-
-    // Search results
-    const responseSearch = await fetch("/cached_responses/search_results.json", {
-      method: "GET",
+      mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
   }).then((response) => response.json())
   .catch((error) => console.error(error));
 
@@ -145,20 +147,12 @@ const JobCategories = () => {
                 onSubmit={handleSubmit}
               >
                 <div class="row mb-5">
-                  <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <input
-                      type="text"
-                      class="form-control form-control-lg"
-                      name="jobtitle"
-                      placeholder="Job title, Company..."
-                    />
-                  </div>
-
                   <label for="underline_select" class="sr-only">
                     Underline select
                   </label>
                   <select
                     id="underline_select"
+                    name="location"
                     class="text-gray-500 bg border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
                   >
                     <option selected>Choose a country</option>
@@ -192,44 +186,28 @@ const JobCategories = () => {
                     </button>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-12 popular-keywords">
-                    <h3>Trending Keywords:</h3>
-                    <ul class="keywords list-unstyled m-0 p-0">
-                      <li>
-                        <a href="#" class="">
-                          UI Designer
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" class="">
-                          Python
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" class="">
-                          Developer
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+          
               </form>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="map">
-        <div className="flex">
-        <a href="/jobcategoriesExp">
-           <div className="basis-1/2">
-            <h2>Number of Jobs in each Category</h2>
-            {searchData && <Doughnut data={createDoughnutChartData(searchData)} />}
+      <section>
+          <div className="grid grid-cols-2 gap-4">
+           <div>
+            
+            {searchData && <>
+              <h2>Number of Jobs in each Category</h2>
+              <Doughnut data={createDoughnutChartData(searchData)} />
+              <a href="/job-categories-exp">View explanation</a>
+              </>}
+              
           </div>
-          <div className="basis-1/2 container mx-auto">
-            <h2>Average Salary in each Category</h2>
-            {searchData && <Bar data={createHorizontalBarChartData(searchData)}
+          <div>
+            
+            {searchData && 
+            <><h2>Average Salary in each Category</h2><Bar data={createHorizontalBarChartData(searchData)}
             options={{
               indexAxis: 'y', // Set the chart to be horizontal
               scales: {
@@ -237,10 +215,11 @@ const JobCategories = () => {
                   beginAtZero: true, // Set this to false if you don't want the x-axis to start at zero
                 },
               },
-            }}/>}
+            }}/><a href="/job-categories-exp">View explanation</a></>}
           </div>
-          </a>
-        </div>
+          </div>
+          
+  
       </section>
       <Footer />
     </>
