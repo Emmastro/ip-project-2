@@ -69,7 +69,6 @@ const SalaryHistory = () => {
       .then((response) => response.json())
       .catch((error) => console.error(error));
 
-    
     setJobData(responseHistory);
     setIsSalaryHistoryLoading(false);
 
@@ -88,7 +87,6 @@ const SalaryHistory = () => {
     })
       .then((response) => response.json())
       .catch((error) => console.error(error));
-
 
     setSearchData(responseSearch);
     setIsSearchDataLoading(false);
@@ -113,11 +111,9 @@ const SalaryHistory = () => {
       .catch((error) => console.error(error));
 
     setJobCategories(categories.results);
-    
   };
 
   const handleCategoryChange = (event) => {
-  
     setSelectedCategory(event.target.value);
     searchJobCategory(event.target.value);
   };
@@ -232,6 +228,46 @@ const SalaryHistory = () => {
           </div>
         </a>
       </section>
+
+      <div className="bg-gray-900 py-10">
+        <div className="mt-8 lg:px-24">
+          <div className="bg-white p-10 rounded shadow">
+            <p className="text-lg font-semibold">
+              Welcome to the Job Salary History Page, where the past meets your
+              career aspirations in an exhilarating visual journey!
+            </p>
+            <p className="font-light leading-8 mt-2">
+              The page offers offers a compelling insight into the salary trends
+              for various job categories within a specific country over the
+              years. Here's what you can expect:
+            </p>
+            <p className="font-light mt-2 leading-8">
+              By choosing your desired country and job category from the
+              available options. This sets the stage for personalized insights.
+            </p>
+            <p className="font-light leading-8">
+              Upon selection, the page transforms into an interactive canvas. It
+              presents you with a line chart depicting the salary trends for the
+              chosen job category across different years. Observe how salaries
+              have evolved over time, gaining valuable historical context.
+            </p>
+
+            <p className="font-light mb-4 leading-8">
+              Adjacent to the line chart is a bar chart that performs a unique
+              comparative analysis. It provides a comprehensive view of the mean
+              salary as well as the maximum salary for the selected job
+              category. This allows you to grasp both the average and the
+              highest earning potential.
+            </p>
+            <p className="font-light leading-8">
+              The visualizations are not static. You can dive deeper by clicking
+              on various elements within the charts. Your interactions unlock
+              layers of insights, letting you discover hidden patterns and gain
+              a thorough understanding of how salaries have fluctuated.
+            </p>
+          </div>
+        </div>
+      </div>
       <Footer />
     </>
   );

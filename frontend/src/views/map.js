@@ -16,7 +16,6 @@ const JobsMap = () => {
   const [jobCategories, setJobCategories] = useState([]);
 
   const searchJobCategory = async (jobCategory) => {
-
     let endpoint = "/cached_responses/search_results.json";
 
     if (REACT_APP_LOAD === "live") {
@@ -37,7 +36,7 @@ const JobsMap = () => {
     setSearchData(responseSearch);
   };
 
-  const handleLocationChange = async(event) => {
+  const handleLocationChange = async (event) => {
     setLocation(event.target.value);
     // Populate categories supported for this country
     let endpoint = "/cached_responses/job_categories.json";
@@ -45,28 +44,25 @@ const JobsMap = () => {
       endpoint = `${BASE_URL}/${location}/categories?${URL_CREDENTIALS}`;
     }
 
-    const categories = await fetch(
-      endpoint,
-      {
+    const categories = await fetch(endpoint, {
       method: "GET",
       mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-  }).then((response) => response.json())
-  .catch((error) => console.error(error));
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .catch((error) => console.error(error));
 
-  console.log("Response:", categories);
-  setJobCategories(categories.results);
-
+    console.log("Response:", categories);
+    setJobCategories(categories.results);
   };
 
   const handleCategoryChange = (event) => {
-    console.log("category change: ", event.target)
+    console.log("category change: ", event.target);
     setSelectedCategory(event.target.value);
-    searchJobCategory(event.target.value)
+    searchJobCategory(event.target.value);
   };
-
 
   const RadioGroup = ({ options, selectedOption, onChange }) => {
     if (options.length === 0) {
@@ -76,23 +72,23 @@ const JobsMap = () => {
     return (
       <div className="flex items-center space-x-4">
         <div className="max-h-64 overflow-y-auto">
-        {options.map((option) => (
-          <label
-            key={option.tag}
-            className="flex items-center cursor-pointer"
-          >
-            <input
-            name="jobCategory"
-              type="radio"
-              value={option.tag}
-              checked={selectedOption === option.tag}
-              onChange={(event) => onChange(event)}
-              className="form-radio h-4 w-4 text-indigo-600"
-            />
-            <span className="ml-2 text-gray-700">{option.label}</span>
-          </label>
-        ))}
-      </div>
+          {options.map((option) => (
+            <label
+              key={option.tag}
+              className="flex items-center cursor-pointer"
+            >
+              <input
+                name="jobCategory"
+                type="radio"
+                value={option.tag}
+                checked={selectedOption === option.tag}
+                onChange={(event) => onChange(event)}
+                className="form-radio h-4 w-4 text-indigo-600"
+              />
+              <span className="ml-2 text-gray-700">{option.label}</span>
+            </label>
+          ))}
+        </div>
       </div>
     );
   };
@@ -111,7 +107,7 @@ const JobsMap = () => {
       </div>
 
       <div className="bg-gray-900 py-10">
-        <div className="mt-8 px-24">
+        <div className="mt-8 lg:px-24 md:px-0">
           <div className="bg-white p-10 rounded shadow">
             <p className="text-lg font-semibold">
               Step into a world of endless possibilities on the Jobs on Maps
