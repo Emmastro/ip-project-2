@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-const mapExp = () => {
+const MapExp = () => {
   return (
     <div>
         <Navbar />
@@ -36,4 +36,4 @@ const mapExp = () => {
   );
 };
 
-export default mapExp;
+export default MapExp;

@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         <div>
           <h1 className='font-semibold'>Support</h1>
-          <p className='text-gray-600'><a href="">Tutorials</a></p>
+          <p className='text-gray-600'><a href="tutorial">Tutorials</a></p>
           <p className='text-gray-600'><a href="/contact">Reach Out</a></p>
         </div>
       </div>
