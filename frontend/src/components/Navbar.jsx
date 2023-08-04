@@ -34,8 +34,8 @@ export default function Navbar() {
               <li><a href="/" className="nav-link hover:text-white">Home</a></li>
               <li><a href="/salary-history" className="nav-link hover:text-white">Salary History</a></li>
               <li><a href="/job-categories" className="nav-link hover:text-white">Job categories</a></li>
-              <li><a href="/about" className="nav-link hover:text-white">About Us</a></li>             
               <li><a href="/jobs-on-map" className="nav-link hover:text-white">Jobs on Map</a></li>
+              <li><a href="/about" className="nav-link hover:text-white">About Us</a></li>         
               <li><a href="/contact" className="nav-link hover:text-white">Contact Us</a></li>
               <li><a href="/blog" className="nav-link hover:text-white">Blog</a></li>
             </ul>

@@ -2,29 +2,101 @@ import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import SalaryCharts from "../components/map";
+import {
+  REACT_APP_LOAD,
+  BASE_URL,
+  URL_CREDENTIALS,
+  countryOptions,
+} from "../constants";
 
 const JobsMap = () => {
   const [searchData, setSearchData] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [location, setLocation] = useState("us");
+  const [jobCategories, setJobCategories] = useState([]);
 
-  useEffect(() => {
-    // Use an async function to fetch data and handle errors
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/cached_responses/search_results.json");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        setSearchData(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  const searchJobCategory = async (jobCategory) => {
 
-    fetchData();
-  }, []);
+    let endpoint = "/cached_responses/search_results.json";
 
-  // Check if searchData is available before rendering SalaryCharts
+    if (REACT_APP_LOAD === "live") {
+      endpoint = `${BASE_URL}/${location}/search?${URL_CREDENTIALS}&results_per_page=30`;
+    }
+
+    const responseSearch = await fetch(endpoint, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .catch((error) => console.error(error));
+
+    console.log("Response:", responseSearch);
+    setSearchData(responseSearch);
+  };
+
+  const handleLocationChange = async(event) => {
+    setLocation(event.target.value);
+    // Populate categories supported for this country
+    let endpoint = "/cached_responses/job_categories.json";
+    if (REACT_APP_LOAD === "live") {
+      endpoint = `${BASE_URL}/${location}/categories?${URL_CREDENTIALS}`;
+    }
+
+    const categories = await fetch(
+      endpoint,
+      {
+      method: "GET",
+      mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+  }).then((response) => response.json())
+  .catch((error) => console.error(error));
+
+  console.log("Response:", categories);
+  setJobCategories(categories.results);
+
+  };
+
+  const handleCategoryChange = (event) => {
+    console.log("category change: ", event.target)
+    setSelectedCategory(event.target.value);
+    searchJobCategory(event.target.value)
+  };
+
+
+  const RadioGroup = ({ options, selectedOption, onChange }) => {
+    if (options.length === 0) {
+      // Return null if the options are not available yet
+      return null;
+    }
+    return (
+      <div className="flex items-center space-x-4">
+        <div className="max-h-64 overflow-y-auto">
+        {options.map((option) => (
+          <label
+            key={option.tag}
+            className="flex items-center cursor-pointer"
+          >
+            <input
+            name="jobCategory"
+              type="radio"
+              value={option.tag}
+              checked={selectedOption === option.tag}
+              onChange={(event) => onChange(event)}
+              className="form-radio h-4 w-4 text-indigo-600"
+            />
+            <span className="ml-2 text-gray-700">{option.label}</span>
+          </label>
+        ))}
+      </div>
+      </div>
+    );
+  };
+
   return (
     <>
       <Navbar />

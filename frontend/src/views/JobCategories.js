@@ -24,7 +24,6 @@ const getRandomColor = () => {
 };
 
 const createDoughnutChartData = (data) => {
-  const jobCategories = data.results.map((job) => job?.label);
   const categoryCounts = jobCategories.reduce((acc, category) => {
     acc[category] = (acc[category] || 0) + 1;
     return acc;
@@ -46,8 +45,7 @@ const createDoughnutChartData = (data) => {
 const groupDataByCategory = (data) => {
   const groupedData = {};
   data.results.forEach((result) => {
-    console.log("result: ", result);
-    const categoryLabel = result?.label;
+    const categoryLabel = result.category.label;
     if (!groupedData[categoryLabel]) {
       groupedData[categoryLabel] = {
         salarySum: 0,
@@ -60,26 +58,11 @@ const groupDataByCategory = (data) => {
   });
 
   const labels = Object.keys(groupedData);
-  const averageSalaries = labels.map(
-    (label) => groupedData[label].salarySum / groupedData[label].count
-  );
 
   return { labels, averageSalaries };
 };
 
 const createHorizontalBarChartData = (job) => {
-  // Your logic to extract data for Horizontal Bar Chart
-  // Example:
-  const { labels, averageSalaries } = groupDataByCategory(job);
-
-  // Sort the data from highest to lowest average salary
-  const sortedData = labels.map((label) => {
-    return {
-      label,
-      averageSalary: averageSalaries[labels.indexOf(label)],
-    };
-  });
-  sortedData.sort((a, b) => b.averageSalary - a.averageSalary);
 
   return {
     labels: sortedData.map((item) => item.label),
@@ -104,20 +87,12 @@ const JobCategories = () => {
     let endpoint = "/cached_responses/search_results.json";
 
     if (REACT_APP_LOAD === "live") {
-      endpoint = `${BASE_URL}/${location}/categories?${URL_CREDENTIALS}`;
+      endpoint = `${BASE_URL}/${location}/search?${URL_CREDENTIALS}&results_per_page=30`;
     }
 
     const responseSearch = await fetch(endpoint, {
       method: "GET",
       mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .catch((error) => console.error(error));
-
-    console.log("Response:", responseSearch);
     setSearchData(responseSearch);
   };
 

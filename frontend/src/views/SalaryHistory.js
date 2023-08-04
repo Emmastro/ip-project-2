@@ -43,6 +43,8 @@ const SalaryHistory = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [location, setLocation] = useState("us");
   const [jobCategories, setJobCategories] = useState([]);
+  const [isSalaryHistoryLoading, setIsSalaryHistoryLoading] = useState(true);
+  const [isSearchDataLoading, setIsSearchDataLoading] = useState(true);
 
   const searchJobCategory = async (jobCategory) => {
     let endpoint = "/cached_responses/salary_history.json";
@@ -65,8 +67,9 @@ const SalaryHistory = () => {
       .then((response) => response.json())
       .catch((error) => console.error(error));
 
-    console.log("responseHistory:", responseHistory);
+    
     setJobData(responseHistory);
+    setIsSalaryHistoryLoading(false);
 
     endpoint = "/cached_responses/search_results.json";
 
@@ -84,8 +87,9 @@ const SalaryHistory = () => {
       .then((response) => response.json())
       .catch((error) => console.error(error));
 
-    console.log("Response:", responseSearch);
+
     setSearchData(responseSearch);
+    setIsSearchDataLoading(false);
   };
 
   const handleLocationChange = async (event) => {
@@ -105,13 +109,7 @@ const SalaryHistory = () => {
     })
       .then((response) => response.json())
       .catch((error) => console.error(error));
-
-    console.log("Response:", categories);
-    setJobCategories(categories.results);
-  };
-
-  const handleCategoryChange = (event) => {
-    console.log("category change: ", event.target);
+ 
     setSelectedCategory(event.target.value);
     searchJobCategory(event.target.value);
   };
@@ -203,16 +201,24 @@ const SalaryHistory = () => {
         <a href="APIPageExp">
           <div className="flex">
             <div className="basis-1/2">
-              {salaryHistoryData && (
-                <SalaryHistoryChart {...salaryHistoryData} />
+              {isSalaryHistoryLoading ? (
+                <p>Loading salary history chart...</p>
+              ) : (
+                salaryHistoryData && (
+                  <SalaryHistoryChart {...salaryHistoryData} />
+                )
               )}
             </div>
             <div className="basis-1/2">
-              {searchData && (
-                <>
-                  <h2>Comparison of Mean Salary and Maximum Salaries</h2>
-                  <Bar data={createBarChartData(searchData)} />
-                </>
+              {isSearchDataLoading ? (
+                <p>Loading chart ...</p>
+              ) : (
+                searchData && (
+                  <>
+                    <h2>Comparison of Mean Salary and Maximum Salaries</h2>
+                    <Bar data={createBarChartData(searchData)} />
+                  </>
+                )
               )}
             </div>
           </div>
