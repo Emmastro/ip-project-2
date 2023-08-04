@@ -10,7 +10,6 @@ import {
   countryOptions,
 } from "../constants";
 
-
 const createDoughnutChartData = (data) => {
   return {
     labels: ["Permanent"],
@@ -46,13 +45,11 @@ const SalaryHistory = () => {
   const [jobCategories, setJobCategories] = useState([]);
 
   const searchJobCategory = async (jobCategory) => {
-
     let endpoint = "/cached_responses/salary_history.json";
 
     // http://api.adzuna.com/v1/api/jobs/gb/search/1?app_id={YOUR API ID}&app_key={YOUR API KEY}&results_per_page=20&what=javascript%20developer&content-type=application/json
     // select item with class jobCategory
 
-    
     if (REACT_APP_LOAD === "live") {
       endpoint = `${BASE_URL}/${location}/history?${URL_CREDENTIALS}&category=${jobCategory}`;
     }
@@ -91,8 +88,7 @@ const SalaryHistory = () => {
     setSearchData(responseSearch);
   };
 
- 
-  const handleLocationChange = async(event) => {
+  const handleLocationChange = async (event) => {
     setLocation(event.target.value);
     // Populate categories supported for this country
     let endpoint = "/cached_responses/job_categories.json";
@@ -100,29 +96,25 @@ const SalaryHistory = () => {
       endpoint = `${BASE_URL}/${location}/categories?${URL_CREDENTIALS}`;
     }
 
-    const categories = await fetch(
-      endpoint,
-      {
+    const categories = await fetch(endpoint, {
       method: "GET",
       mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-  }).then((response) => response.json())
-  .catch((error) => console.error(error));
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .catch((error) => console.error(error));
 
-  console.log("Response:", categories);
-  setJobCategories(categories.results);
-
+    console.log("Response:", categories);
+    setJobCategories(categories.results);
   };
-
 
   const handleCategoryChange = (event) => {
-    console.log("category change: ", event.target)
+    console.log("category change: ", event.target);
     setSelectedCategory(event.target.value);
-    searchJobCategory(event.target.value)
+    searchJobCategory(event.target.value);
   };
-
 
   const RadioGroup = ({ options, selectedOption, onChange }) => {
     if (options.length === 0) {
@@ -132,23 +124,23 @@ const SalaryHistory = () => {
     return (
       <div className="flex items-center space-x-4">
         <div className="max-h-64 overflow-y-auto">
-        {options.map((option) => (
-          <label
-            key={option.tag}
-            className="flex items-center cursor-pointer"
-          >
-            <input
-            name="jobCategory"
-              type="radio"
-              value={option.tag}
-              checked={selectedOption === option.tag}
-              onChange={(event) => onChange(event)}
-              className="form-radio h-4 w-4 text-indigo-600"
-            />
-            <span className="ml-2 text-gray-700">{option.label}</span>
-          </label>
-        ))}
-      </div>
+          {options.map((option) => (
+            <label
+              key={option.tag}
+              className="flex items-center cursor-pointer"
+            >
+              <input
+                name="jobCategory"
+                type="radio"
+                value={option.tag}
+                checked={selectedOption === option.tag}
+                onChange={(event) => onChange(event)}
+                className="form-radio h-4 w-4 text-indigo-600"
+              />
+              <span className="ml-2 text-gray-700">{option.label}</span>
+            </label>
+          ))}
+        </div>
       </div>
     );
   };
@@ -190,13 +182,16 @@ const SalaryHistory = () => {
                   </select>
                 </div>
                 <div class="row">
-                  <h1 className="text-2xl font-bold mb-4">Select a job category:</h1>
-                  {jobCategories.length > 0 && <RadioGroup
-                    options={jobCategories}
-                    selectedOption={selectedCategory}
-                    onChange={handleCategoryChange}
-                  />}
-                  
+                  <h1 className="text-2xl font-bold mb-4">
+                    Select a job category:
+                  </h1>
+                  {jobCategories.length > 0 && (
+                    <RadioGroup
+                      options={jobCategories}
+                      selectedOption={selectedCategory}
+                      onChange={handleCategoryChange}
+                    />
+                  )}
                 </div>
               </form>
             </div>
@@ -223,6 +218,46 @@ const SalaryHistory = () => {
           </div>
         </a>
       </section>
+
+      <div className="bg-gray-900 py-10">
+        <div className="mt-8 px-24">
+          <div className="bg-white p-10 rounded shadow">
+            <p className="text-lg font-semibold">
+              Welcome to the Job Salary History Page, where the past meets your
+              career aspirations in an exhilarating visual journey!
+            </p>
+            <p className="font-light leading-8 mt-2">
+              This page offers a compelling insight into the salary trends for
+              various job categories within a specific country over the years.
+              Here's what you can expect:
+            </p>
+            <p className="font-light mt-2 leading-8">
+              By choosing your desired country and job category from the
+              available options, the stage is set for personalized insights.
+            </p>
+            <p className="font-light leading-8">
+              Upon selection, the page transforms into an interactive canvas. It
+              presents you with a line chart depicting the salary trends for the
+              chosen job category across different years. Observe how salaries
+              have evolved over time, gaining valuable historical context.
+            </p>
+
+            <p className="font-light mb-4 leading-8">
+              Adjacent to the line chart is a bar chart that performs a unique
+              comparative analysis. It provides a comprehensive view of the mean
+              salary as well as the maximum salary for the selected job
+              category. This allows you to grasp both the average and the
+              highest earning potential.
+            </p>
+            <p className="font-light leading-8">
+              The visualizations are not static. You can dive deeper by clicking
+              on various elements within the charts. Your interactions unlock
+              layers of insights, letting you discover hidden patterns and gain
+              a thorough understanding of how salaries have fluctuated.
+            </p>
+          </div>
+        </div>
+      </div>
       <Footer />
     </>
   );

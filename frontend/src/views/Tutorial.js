@@ -8,7 +8,7 @@ const Tutorial = () => {
 
   const toggleContent1 = () => {
     setShowDefault(true);
-    setShowGoogle(false)
+    setShowGoogle(false);
   };
 
   const toggleContent2 = () => {
@@ -52,20 +52,26 @@ const Tutorial = () => {
             <ul className="font-light py-1 list-decimal list-inside">
               <li>Select the country </li>
               <li>Click on search job button</li>
-              <li>A pie chart and bar chart are shows.</li>
+              <li>A pie chart and bar chart are shows</li>
               <li>The pie chart shows the number of jobs in each category</li>
               <li>The bar chart shows the average salary in each category</li>
-              <li>Charts can be interacted with by clicking on them.</li>
+              <li>Charts can be interacted with by clicking on them</li>
             </ul>
           </div>
           <div className="bg-[#F4ECC2] h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
             <h1 className="text-sm font-semibold py-4">
               How to use the Jobs on Map page
             </h1>
-            <p className="font-light">
-              Comparison of minimum and maximum salary in a certain country.
-              This can show the wealth gap in a country.
-            </p>
+            <p className="font-light">This shows location of jobs on map</p>
+            <ul className="font-light py-1 list-decimal list-inside">
+              <li>Search for a job</li>
+              <li>The result of tbe search will be shown on the map</li>
+              <li>
+                This shows the markers indicating the location of the job
+                worldide
+              </li>
+              <li>Details of the job are shown by clicking on the markers</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -125,7 +131,7 @@ const Tutorial = () => {
 
               <h2 className="text-lg font-semibold mt-10">API Processing</h2>
               <p className="font-bold mt-2">Direct Frontend Interaction:</p>
-              <p className="font-light mb-4 leadeing-8">
+              <p className="font-light mb-4 leading-8">
                 Leveraging the power of React, we seamlessly interacted with the
                 Adzuna API directly from the frontend. This approach ensured
                 that users experience the most current job market trends as they
@@ -145,7 +151,7 @@ const Tutorial = () => {
 
               <h2 className="text-lg font-semibold mt-10">API Usage</h2>
               <p className="font-bold mt-2">Real-time Job Insights:</p>
-              <p className="font-light mb-4 leadeing-8">
+              <p className="font-light mb-4 leading-8">
                 The Adzuna API data became the foundation for our website's
                 real-time job insights. By adeptly integrating the API data, we
                 developed interactive visualizations that allow users to explore
@@ -181,7 +187,8 @@ const Tutorial = () => {
                 complexities of the global job landscape with confidence.
               </p>
             </div>
-          )} {showGoogle && (
+          )}{" "}
+          {showGoogle && (
             <div className="bg-[#F4ECC2] p-4 rounded shadow">
               <h2 className="text-lg font-semibold">About Google Maps API</h2>
               <p className="text-zinc-500 leading-8">
