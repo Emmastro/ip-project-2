@@ -92,10 +92,8 @@ function Authors() {
       <div>
         <div className="w-full lg:h-screen bg-[url('../public/teams.jpg')] bg-cover bg-no-repeat bg-center bg-fixed relative">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 lg:absolute lg:top-[70%] text-center lg:translate-x-[-50%] lg:left-[50%] lg:w-4/5 pt-48 lg:pt-0 pb-16 lg:pb-0">
-            <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em] p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
-              <h1 className="text-sm font-semibold py-4">
-                Our Approach
-              </h1>
+            <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em] p-3 border rounded transition-all ease-in-out">
+              <h1 className="text-sm font-semibold py-4">Our Approach</h1>
               <p className="font-light">
                 We provide a comprehensive platform that empowers users with
                 valuable job-related data and visualizations.
@@ -109,10 +107,8 @@ function Authors() {
                 <li>Data Accuracy and Timeliness</li>
               </ul>
             </div>
-            <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em] p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
-              <h1 className="text-sm font-semibold py-4">
-                Our Mission
-              </h1>
+            <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em] p-3 border rounded transition-all ease-in-out">
+              <h1 className="text-sm font-semibold py-4">Our Mission</h1>
               <p className="font-light">
                 This is to democratize job-related data and empower individuals,
                 businesses, and policymakers with valuable insights to make
@@ -124,10 +120,8 @@ function Authors() {
                 greater transparency in the world of work.
               </p>
             </div>
-            <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em]  p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
-              <h1 className="text-sm font-semibold py-4">
-                Our Service
-              </h1>
+            <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em]  p-3 border rounded transition-all ease-in-out">
+              <h1 className="text-sm font-semibold py-4">Our Service</h1>
               <p className="font-light">
                 The website will offer a range of services to fulfill its
                 mission and deliver a valuable experience to users:

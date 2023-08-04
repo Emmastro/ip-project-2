@@ -44,7 +44,7 @@ const Home = () => {
               assist you in navigating our data and visualizations effectively.
             </p>
             <a
-              href="/"
+              href="/job-categories"
               className="rounded w-2/5 md:w-1/5 p-2 text-[#F4ECC2] text-center my-6 bg-gray-900"
             >
               Explore Data
@@ -54,23 +54,23 @@ const Home = () => {
 
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 mb-12 lg:px-24">
           <div className="p-3">
-            <img src="../images/choose us.jpg" width={200} height={200} />
+            <img src="../images/chooseus.jpg" width={500} height={500} />
           </div>
           <div className="p-3">
             <h2 className="text-2xl pb-3">Why Choose Us</h2>
-            <div className="p-3 mb-3 bg-[#F4ECC2] hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+            <div className="p-3 mb-3 bg-[#F4ECC2] border rounded transition-all ease-in-out">
               <p>
                 1. Make Informed Decisions: Gain valuable insights to shape your
                 career choices and job search strategies.
               </p>
             </div>
-            <div className="p-3 mb-3 bg-[#F4ECC2] hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+            <div className="p-3 mb-3 bg-[#F4ECC2] border rounded transition-all ease-in-out">
               <p>
                 2. Stay Ahead of the Curve: Understand global job trends and
                 stay competitive in the evolving job market.
               </p>
             </div>
-            <div className="p-3 bg-[#F4ECC2] hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+            <div className="p-3 bg-[#F4ECC2] border rounded transition-all ease-in-out">
               <p>
                 3. Business Advantage: Leverage data to make informed hiring
                 decisions and enhance workforce planning.
@@ -85,7 +85,7 @@ const Home = () => {
           </p>
 
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <div className="p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+            <div className="p-3 border rounded transition-all ease-in-out">
               <img src="../images/learning.jpeg" width={500} height={500} />
               <h1 className="text-sm font-semibold text-zinc-500 mt-3 mb-1">
                 Benson Mugure, 20 July 2023
@@ -95,7 +95,7 @@ const Home = () => {
                 Various ways of learning to achive desired skills
               </p>
             </div>
-            <div className="p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+            <div className="p-3 border rounded transition-all ease-in-out">
               <img src="../images/writing.jpeg" width={500} height={500} />
               <h1 className="text-sm font-semibold text-zinc-500 mt-3 mb-1">
                 Emmanuel Murairi, 24 July 2023
@@ -103,7 +103,7 @@ const Home = () => {
               <h2 className="text-sm font-semibold">Writing</h2>
               <p className="font-light">How to write an effective blog</p>
             </div>
-            <div className="p-3 hover:shadow-2xl hover:scale-105 cursor-pointer border rounded hover:border-none transition-all ease-in-out">
+            <div className="p-3 border rounded transition-all ease-in-out">
               <img src="../images/working.jpeg" width={500} height={500} />
               <h1 className="text-sm font-semibold text-zinc-500 mt-3 mb-1">
                 Josephine Ekhator, 27 July 2023
@@ -113,29 +113,12 @@ const Home = () => {
                 How to work effectively and survive in the IT sector
               </p>
             </div>
-            <div className="relative">
-              <a
-                href="/"
-                className="rounded h-15 w-24 p-2 text-[#F4ECC2] text-center bg-gray-900"
-              >
-                Go To Blogs
-              </a>
-              <svg
-                className="absolute top-40% text-[#F4ECC2] w-6 top-[50%] -translate-x-0 translate-y-[-50%] left-14"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-2 h-2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-            </div>
+            <a
+              href="/blog"
+              className="rounded h-15 w-32 p-2 text-[#F4ECC2] text-center bg-gray-900"
+            >
+              Go To Blogs
+            </a>
           </div>
         </div>
 
