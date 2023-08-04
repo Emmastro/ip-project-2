@@ -8,19 +8,20 @@ const Tutorial = () => {
 
   const toggleContent1 = () => {
     setShowDefault(true);
-    setShowGoogle(false)
+    setShowGoogle(false);
   };
 
   const toggleContent2 = () => {
     setShowDefault(false);
     setShowGoogle(true);
   };
+
   return (
     <div>
       <Navbar />
-      <div className="w-full h-screen bg-[url('../public/Big-Data-Analyticsq.jpg')] bg-cover bg-no-repeat bg-fixed relative">
-        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 mb-12 absolute top-[25%] text-center translate-x-[-50%] left-[50%] w-4/5">
-          <div className="bg-[#F4ECC2] h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
+      <div className="w-full h-screen bg-[url('../public/Big-Data-Analyticsq.jpg')] bg-cover bg-no-repeat bg-fixed relative mb-200">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 mb-12 absolute top-[25%] text-center translate-x-[-50%] left-[50%] w-4/5 mb-24 md:mb-0">
+          <div className="bg-[#F4ECC2] mb-1  h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
             <h1 className="text-sm font-semibold py-2">
               How to use the Salary History Page
             </h1>
@@ -28,40 +29,32 @@ const Tutorial = () => {
               This shows the average salary in a certain country over the years
             </p>
             <ul className="font-light py-1 list-decimal list-inside">
-              <li>Select the country </li>
+              <li>Select the country</li>
               <li>Select a job category</li>
               <li>A line chart and bar chart are shown.</li>
-              <li>
-                The line chart shows the salary trends of that job over the year
-              </li>
-              <li>
-                The bar chart shows comparison of mean salary and maximum
-                salaries
-              </li>
+              <li>The line chart shows the salary trends of that job over the year</li>
+              <li>The bar chart shows comparison of mean salary and maximum salaries</li>
               <li>Charts can be interacted with by clicking on them.</li>
             </ul>
           </div>
-          <div className="bg-[#F4ECC2] h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
+          <div className="bg-[#F4ECC2] mb-1  h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
             <h1 className="text-sm font-semibold py-2">
               How to use the Job Categories Page
             </h1>
             <p className="font-bold py-1">
-              This shows the number of jobs in each category with it's average
-              salary
+              This shows the number of jobs in each category with its average salary
             </p>
             <ul className="font-light py-1 list-decimal list-inside">
-              <li>Select the country </li>
-              <li>Click on search job button</li>
-              <li>A pie chart and bar chart are shows.</li>
+              <li>Select the country</li>
+              <li>Click on the search job button</li>
+              <li>A pie chart and bar chart are shown.</li>
               <li>The pie chart shows the number of jobs in each category</li>
               <li>The bar chart shows the average salary in each category</li>
               <li>Charts can be interacted with by clicking on them.</li>
             </ul>
           </div>
-          <div className="bg-[#F4ECC2] h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
-            <h1 className="text-sm font-semibold py-4">
-              How to use the Jobs on Map page
-            </h1>
+          <div className="bg-[#F4ECC2] mb-1  h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
+            <h1 className="text-sm font-semibold py-4">How to use the Jobs on Map page</h1>
             <p className="font-light">
               Comparison of minimum and maximum salary in a certain country.
               This can show the wealth gap in a country.
@@ -70,8 +63,8 @@ const Tutorial = () => {
         </div>
       </div>
 
-      <div className="bg-gray-900 py-10">
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="bg-gray-900 py-10 pt-25">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 px-6 md:px-24 mb-24 md:mb-0">
           <div className="flex justify-center">
             <button
               className="hover:bg-black cursor-pointer text-white font-semibold py-2 px-4 mr-4 outline outline-offset-2 outline-white-500"
@@ -90,7 +83,7 @@ const Tutorial = () => {
           </div>
         </div>
 
-        <div className="mt-8 px-24">
+        <div className="pt-12 mt-8 px-6 mb-12 md:px-24">
           {showDefault && (
             <div className="bg-white p-10 rounded shadow">
               <h2 className="text-lg font-semibold">About Azuna API</h2>
@@ -99,8 +92,8 @@ const Tutorial = () => {
                 search experience for users. This is achieved by leveraging
                 Adzuna's comprehensive job listing database structure, real-time
                 information updates, advanced search filtration systems,
-                geolocation services, personalised recommendations, and data
-                visualisation capabilities. Incorporating the API alongside
+                geolocation services, personalized recommendations, and data
+                visualization capabilities. Incorporating the API alongside
                 React enables the creation of a robust and a high-performing job
                 search platform that effectively addresses the requirements of
                 job seekers on a global scale.
@@ -125,7 +118,7 @@ const Tutorial = () => {
 
               <h2 className="text-lg font-semibold mt-10">API Processing</h2>
               <p className="font-bold mt-2">Direct Frontend Interaction:</p>
-              <p className="font-light mb-4 leadeing-8">
+              <p className="font-light mb-4 leading-8">
                 Leveraging the power of React, we seamlessly interacted with the
                 Adzuna API directly from the frontend. This approach ensured
                 that users experience the most current job market trends as they
@@ -145,7 +138,7 @@ const Tutorial = () => {
 
               <h2 className="text-lg font-semibold mt-10">API Usage</h2>
               <p className="font-bold mt-2">Real-time Job Insights:</p>
-              <p className="font-light mb-4 leadeing-8">
+              <p className="font-light mb-4 leading-8">
                 The Adzuna API data became the foundation for our website's
                 real-time job insights. By adeptly integrating the API data, we
                 developed interactive visualizations that allow users to explore
@@ -181,11 +174,12 @@ const Tutorial = () => {
                 complexities of the global job landscape with confidence.
               </p>
             </div>
-          )} {showGoogle && (
-            <div className="bg-[#F4ECC2] p-4 rounded shadow">
+          )}
+          {showGoogle && (
+            <div className="bg-[#F4ECC2] mb-1 p-4 rounded shadow">
               <h2 className="text-lg font-semibold">About Google Maps API</h2>
               <p className="text-zinc-500 leading-8">
-                TIt is a collection of Google-provided application programming
+                It is a collection of Google-provided application programming
                 interfaces (APIs) that permit developers to incorporate Google
                 Maps into websites and applications. It enables developers to
                 create interactive web applications with feature-rich maps by
@@ -216,7 +210,7 @@ const Tutorial = () => {
                 Implementing React Components:
               </h2>
               <p className="font-bold mt-2">Rendering and Interaction:</p>
-              <p className="font-light mb-4 leadeing-8">
+              <p className="font-light mb-4 leading-8">
                 Harnessing the power of React, we meticulously crafted
                 purposeful components to seamlessly render and interact with the
                 Google Maps API. These components formed the bridge between our
@@ -228,7 +222,7 @@ const Tutorial = () => {
                 API Usage: Visualizing Jobs on Maps
               </h2>
               <p className="font-bold mt-2">Seamless Data Integration:</p>
-              <p className="font-light mb-4 leadeing-8">
+              <p className="font-light mb-4 leading-8">
                 Our integration of the Google Maps API transformed the data
                 visualization section of our website. By effectively linking the
                 API with our job-related data, we seamlessly integrated job
