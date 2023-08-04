@@ -45,20 +45,28 @@ const Tutorial = () => {
               This shows the number of jobs in each category with its average salary
             </p>
             <ul className="font-light py-1 list-decimal list-inside">
-              <li>Select the country</li>
-              <li>Click on the search job button</li>
-              <li>A pie chart and bar chart are shown.</li>
+              <li>Select the country </li>
+              <li>Click on search job button</li>
+              <li>A pie chart and bar chart are shows</li>
               <li>The pie chart shows the number of jobs in each category</li>
               <li>The bar chart shows the average salary in each category</li>
-              <li>Charts can be interacted with by clicking on them.</li>
+              <li>Charts can be interacted with by clicking on them</li>
             </ul>
           </div>
-          <div className="bg-[#F4ECC2] mb-1  h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
-            <h1 className="text-sm font-semibold py-4">How to use the Jobs on Map page</h1>
-            <p className="font-light">
-              Comparison of minimum and maximum salary in a certain country.
-              This can show the wealth gap in a country.
-            </p>
+          <div className="bg-[#F4ECC2] h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
+            <h1 className="text-sm font-semibold py-4">
+              How to use the Jobs on Map page
+            </h1>
+            <p className="font-light">This shows location of jobs on map</p>
+            <ul className="font-light py-1 list-decimal list-inside">
+              <li>Search for a job</li>
+              <li>The result of tbe search will be shown on the map</li>
+              <li>
+                This shows the markers indicating the location of the job
+                worldide
+              </li>
+              <li>Details of the job are shown by clicking on the markers</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -174,9 +182,9 @@ const Tutorial = () => {
                 complexities of the global job landscape with confidence.
               </p>
             </div>
-          )}
+          )}{" "}
           {showGoogle && (
-            <div className="bg-[#F4ECC2] mb-1 p-4 rounded shadow">
+            <div className="bg-[#F4ECC2] p-4 rounded shadow">
               <h2 className="text-lg font-semibold">About Google Maps API</h2>
               <p className="text-zinc-500 leading-8">
                 It is a collection of Google-provided application programming
