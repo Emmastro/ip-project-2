@@ -106,10 +106,11 @@ const JobCategories = () => {
     let endpoint = "/cached_responses/search_results.json";
 
     if (REACT_APP_LOAD === "live") {
-      endpoint = `${BASE_URL}/${location}/search?${URL_CREDENTIALS}&results_per_page=30`;
+      endpoint = `${BASE_URL}/${location}/history?${URL_CREDENTIALS}&category=${jobCategory}`;
     }
 
     console.log('fetching from endpoint: ', endpoint);
+    console.log(location)
 
     // Search results
     const responseSearch = await fetch(

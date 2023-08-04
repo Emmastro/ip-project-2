@@ -7,6 +7,18 @@ import {
   REACT_APP_LOAD, BASE_URL, URL_CREDENTIALS
 } from "../constants";
 
+const createDoughnutChartData = (data) => {
+  return {
+    labels: ["Permanent"],
+    datasets: [
+      {
+        data: [2],
+        backgroundColor: ["#FF6384"],
+      },
+    ],
+  };
+};
+
 const createBarChartData = (data) => {
   // Your logic to extract data for Bar Chart
   console.log("createBarChartData: ", data);
@@ -34,6 +46,7 @@ const SalaryHistory = () => {
 
     let endpoint = "/cached_responses/salary_history.json";
 
+    // http://api.adzuna.com/v1/api/jobs/gb/search/1?app_id={YOUR API ID}&app_key={YOUR API KEY}&results_per_page=20&what=javascript%20developer&content-type=application/json
     if (REACT_APP_LOAD === "live") {
       endpoint = `${BASE_URL}/${location}/history?${URL_CREDENTIALS}&category=${jobCategory}`;
     }
