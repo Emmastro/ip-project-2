@@ -4,9 +4,16 @@ import Footer from "../components/Footer";
 
 const Tutorial = () => {
   const [showDefault, setShowDefault] = useState(true);
+  const [showGoogle, setShowGoogle] = useState(false);
 
-  const toggleContent = () => {
-    setShowDefault(!showDefault);
+  const toggleContent1 = () => {
+    setShowDefault(true);
+    setShowGoogle(false)
+  };
+
+  const toggleContent2 = () => {
+    setShowDefault(false);
+    setShowGoogle(true);
   };
   return (
     <div>
@@ -68,7 +75,7 @@ const Tutorial = () => {
           <div className="flex justify-center">
             <button
               className="hover:bg-black cursor-pointer text-white font-semibold py-2 px-4 mr-4 outline outline-offset-2 outline-white-500"
-              onClick={toggleContent}
+              onClick={toggleContent1}
             >
               Using Adzuna API
             </button>
@@ -76,7 +83,7 @@ const Tutorial = () => {
           <div className="flex justify-center">
             <button
               className="hover:bg-black cursor-pointer text-white font-semibold py-2 px-4 mr-4 outline outline-offset-2 outline-white-500"
-              onClick={toggleContent}
+              onClick={toggleContent2}
             >
               Using Google Maps API
             </button>
@@ -84,7 +91,7 @@ const Tutorial = () => {
         </div>
 
         <div className="mt-8 px-24">
-          {showDefault ? (
+          {showDefault && (
             <div className="bg-white p-10 rounded shadow">
               <h2 className="text-lg font-semibold">About Azuna API</h2>
               <p className="font-light leading-8">
@@ -174,7 +181,7 @@ const Tutorial = () => {
                 complexities of the global job landscape with confidence.
               </p>
             </div>
-          ) : (
+          )} {showGoogle && (
             <div className="bg-[#F4ECC2] p-4 rounded shadow">
               <h2 className="text-lg font-semibold">About Google Maps API</h2>
               <p className="text-zinc-500 leading-8">
