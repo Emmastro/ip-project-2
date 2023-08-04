@@ -26,14 +26,14 @@ function Authors() {
       others: "I write poems and fight crime (bugs)",
     },
     {
-      url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      url: "../images/emma.jpeg",
       name: "Emmanuel Murairi",
       interest:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "I am passionate about creating tech solution tailored to African Problems. Besides tech, I love music. I am currently playing the violin with a chamber orchestra in Mauritius.",
       contribution:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "I led the development of the project, putting together pieces from all team members, and ensure we're aligned with the project requirements.",
       others:
-        "ILorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "I am a big fan of the Marvel Cinematic Universe, and good action movies in general.",
     },
 
     {
