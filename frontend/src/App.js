@@ -7,8 +7,8 @@ import Home from "./views/Home";
 import SalaryHistory from "./views/SalaryHistory";
 import JobCategories from "./views/JobCategories";
 import JobCategoriesExp from "./views/jobcategoriesExp";
-import JobsMap from "./views/map"
-import mapExp from "./views/mapExp"
+import JobsMap from "./views/map";
+import mapExp from "./views/mapExp";
 import About from "./views/About.js";
 import Register from "./views/Register.js";
 import Contact from "./views/Contact";
