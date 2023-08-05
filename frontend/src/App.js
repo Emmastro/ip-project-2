@@ -15,6 +15,7 @@ import Blog from "./views/Blog";
 import Read from "./views/Read";
 import Tutorial from "./views/Tutorial";
 import MapExp from "./views/mapExp";
+import SalaryHistoryExp from "./views/salaryHistoryExp";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<Read />} />
         <Route path="/map-exp" element={<MapExp />} />
+        <Route path="/salary-history-exp" element={<SalaryHistoryExp />} />
       </Routes>
     </BrowserRouter>
   );

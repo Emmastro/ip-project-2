@@ -201,10 +201,10 @@ const SalaryHistory = () => {
         </div>
       </section>
 
-      <section className="map">
+      <section className="map mb-12">
         <a href="APIPageExp">
-          <div className="flex">
-            <div className="basis-1/2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="">
               {isSalaryHistoryLoading ? (
                 <p>Loading salary history chart...</p>
               ) : (
@@ -213,7 +213,7 @@ const SalaryHistory = () => {
                 )
               )}
             </div>
-            <div className="basis-1/2">
+            <div className="">
               {isSearchDataLoading ? (
                 <p>Loading chart ...</p>
               ) : (
@@ -221,6 +221,12 @@ const SalaryHistory = () => {
                   <>
                     <h2>Comparison of Mean Salary and Maximum Salaries</h2>
                     <Bar data={createBarChartData(searchData)} />
+                    <a
+                      href="/salary-history-exp"
+                      className="lg:-mx-16 rounded w-2/5 md:w-1/5 p-2 text-[#F4ECC2] text-center my-6 bg-gray-900"
+                    >
+                      View explanation
+                    </a>
                   </>
                 )
               )}
@@ -230,7 +236,7 @@ const SalaryHistory = () => {
       </section>
 
       <div className="bg-gray-900 py-10">
-        <div className="mt-8 lg:px-24">
+        <div className="mt-8 lg:px-24 md:px-0">
           <div className="bg-white p-10 rounded shadow">
             <p className="text-lg font-semibold">
               Welcome to the Job Salary History Page, where the past meets your
