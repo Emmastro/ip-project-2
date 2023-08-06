@@ -19,9 +19,9 @@ const Tutorial = () => {
   return (
     <div>
       <Navbar />
-      <div className="w-full h-screen bg-[url('../public/Big-Data-Analyticsq.jpg')] bg-cover bg-no-repeat bg-fixed relative mb-200">
-        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 mb-12 absolute top-[25%] text-center translate-x-[-50%] left-[50%] w-4/5 mb-24 md:mb-0">
-          <div className="bg-[#F4ECC2] mb-1  h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
+      <div className="w-full lg:h-screen  bg-[url('../public/Big-Data-Analyticsq.jpg')] bg-cover bg-no-repeat bg-fixed relative">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 lg:absolute lg:top-[25%] text-center lg:translate-x-[-50%] lg:left-[50%] lg:w-4/5 pt-48 lg:pt-0 pb-16 lg:pb-0">
+          <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em] p-3 border rounded transition-all ease-in-out">
             <h1 className="text-sm font-semibold py-2">
               How to use the Salary History Page
             </h1>
@@ -47,19 +47,21 @@ const Tutorial = () => {
             <ul className="font-light py-1 list-decimal list-inside">
               <li>Select the country </li>
               <li>Click on search job button</li>
-              <li>A pie chart and bar chart are shows</li>
+              <li>A pie chart and bar chart are shows.</li>
               <li>The pie chart shows the number of jobs in each category</li>
               <li>The bar chart shows the average salary in each category</li>
-              <li>Charts can be interacted with by clicking on them</li>
+              <li>Charts can be interacted with by clicking on them.</li>
             </ul>
           </div>
-          <div className="bg-[#F4ECC2] h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
+          <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em] p-3 border rounded transition-all ease-in-out">
             <h1 className="text-sm font-semibold py-4">
               How to use the Jobs on Map page
             </h1>
-            <p className="font-light">This shows location of jobs on map</p>
+            <p className="font-light">
+              This page shows the location of various jobs worldwide
+            </p>
             <ul className="font-light py-1 list-decimal list-inside">
-              <li>Search for a job</li>
+              <li>Search for a job </li>
               <li>The result of tbe search will be shown on the map</li>
               <li>
                 This shows the markers indicating the location of the job
@@ -91,7 +93,7 @@ const Tutorial = () => {
           </div>
         </div>
 
-        <div className="pt-12 mt-8 px-6 mb-12 md:px-24">
+        <div className="mt-8 lg:px-24">
           {showDefault && (
             <div className="bg-white p-10 rounded shadow">
               <h2 className="text-lg font-semibold">About Azuna API</h2>
@@ -126,7 +128,7 @@ const Tutorial = () => {
 
               <h2 className="text-lg font-semibold mt-10">API Processing</h2>
               <p className="font-bold mt-2">Direct Frontend Interaction:</p>
-              <p className="font-light mb-4 leading-8">
+              <p className="font-light mb-4 leadeing-8">
                 Leveraging the power of React, we seamlessly interacted with the
                 Adzuna API directly from the frontend. This approach ensured
                 that users experience the most current job market trends as they
@@ -146,7 +148,7 @@ const Tutorial = () => {
 
               <h2 className="text-lg font-semibold mt-10">API Usage</h2>
               <p className="font-bold mt-2">Real-time Job Insights:</p>
-              <p className="font-light mb-4 leading-8">
+              <p className="font-light mb-4 leadeing-8">
                 The Adzuna API data became the foundation for our website's
                 real-time job insights. By adeptly integrating the API data, we
                 developed interactive visualizations that allow users to explore

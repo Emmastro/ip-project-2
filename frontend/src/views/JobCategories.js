@@ -188,13 +188,18 @@ const JobCategories = () => {
       </section>
 
       <section>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 mb-5">
           <div>
             {searchData && (
               <>
                 <h2>Number of Jobs in each Category</h2>
                 <Doughnut data={createDoughnutChartData(searchData)} />
-                <a href="/job-categories-exp">View explanation</a>
+                <a
+                  href="/job-categories-exp"
+                  className="mx-4 rounded w-2/5 md:w-1/5 p-2 text-[#F4ECC2] text-center my-6 bg-gray-900"
+                >
+                  View explanation
+                </a>
               </>
             )}
           </div>
@@ -213,7 +218,6 @@ const JobCategories = () => {
                     },
                   }}
                 />
-                <a href="/job-categories-exp">View explanation</a>
               </>
             )}
           </div>
