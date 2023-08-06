@@ -15,6 +15,7 @@ const Tutorial = () => {
     setShowDefault(false);
     setShowGoogle(true);
   };
+
   return (
     <div>
       <Navbar />
@@ -28,26 +29,20 @@ const Tutorial = () => {
               This shows the average salary in a certain country over the years
             </p>
             <ul className="font-light py-1 list-decimal list-inside">
-              <li>Select the country </li>
+              <li>Select the country</li>
               <li>Select a job category</li>
               <li>A line chart and bar chart are shown.</li>
-              <li>
-                The line chart shows the salary trends of that job over the year
-              </li>
-              <li>
-                The bar chart shows comparison of mean salary and maximum
-                salaries
-              </li>
+              <li>The line chart shows the salary trends of that job over the year</li>
+              <li>The bar chart shows comparison of mean salary and maximum salaries</li>
               <li>Charts can be interacted with by clicking on them.</li>
             </ul>
           </div>
-          <div className="bg-[#F4ECC2] lg:h-[23em] w-4/5 mx-auto lg:w-[20em] p-3 border rounded transition-all ease-in-out">
+          <div className="bg-[#F4ECC2] mb-1  h-[23em] w-[20em] p-3 border rounded hover:border-none transition-all ease-in-out">
             <h1 className="text-sm font-semibold py-2">
               How to use the Job Categories Page
             </h1>
             <p className="font-bold py-1">
-              This shows the number of jobs in each category with it's average
-              salary
+              This shows the number of jobs in each category with its average salary
             </p>
             <ul className="font-light py-1 list-decimal list-inside">
               <li>Select the country </li>
@@ -78,8 +73,8 @@ const Tutorial = () => {
         </div>
       </div>
 
-      <div className="bg-gray-900 py-10 md:mt-auto">
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="bg-gray-900 py-10 pt-25">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 px-6 md:px-24 mb-24 md:mb-0">
           <div className="flex justify-center">
             <button
               className="hover:bg-black cursor-pointer text-white font-semibold py-2 px-4 mr-4 outline outline-offset-2 outline-white-500"
@@ -107,8 +102,8 @@ const Tutorial = () => {
                 search experience for users. This is achieved by leveraging
                 Adzuna's comprehensive job listing database structure, real-time
                 information updates, advanced search filtration systems,
-                geolocation services, personalised recommendations, and data
-                visualisation capabilities. Incorporating the API alongside
+                geolocation services, personalized recommendations, and data
+                visualization capabilities. Incorporating the API alongside
                 React enables the creation of a robust and a high-performing job
                 search platform that effectively addresses the requirements of
                 job seekers on a global scale.
@@ -194,7 +189,7 @@ const Tutorial = () => {
             <div className="bg-[#F4ECC2] p-4 rounded shadow">
               <h2 className="text-lg font-semibold">About Google Maps API</h2>
               <p className="text-zinc-500 leading-8">
-                TIt is a collection of Google-provided application programming
+                It is a collection of Google-provided application programming
                 interfaces (APIs) that permit developers to incorporate Google
                 Maps into websites and applications. It enables developers to
                 create interactive web applications with feature-rich maps by
@@ -225,7 +220,7 @@ const Tutorial = () => {
                 Implementing React Components:
               </h2>
               <p className="font-bold mt-2">Rendering and Interaction:</p>
-              <p className="font-light mb-4 leadeing-8">
+              <p className="font-light mb-4 leading-8">
                 Harnessing the power of React, we meticulously crafted
                 purposeful components to seamlessly render and interact with the
                 Google Maps API. These components formed the bridge between our
@@ -237,7 +232,7 @@ const Tutorial = () => {
                 API Usage: Visualizing Jobs on Maps
               </h2>
               <p className="font-bold mt-2">Seamless Data Integration:</p>
-              <p className="font-light mb-4 leadeing-8">
+              <p className="font-light mb-4 leading-8">
                 Our integration of the Google Maps API transformed the data
                 visualization section of our website. By effectively linking the
                 API with our job-related data, we seamlessly integrated job

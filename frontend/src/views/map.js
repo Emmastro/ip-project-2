@@ -21,6 +21,7 @@ const JobsMap = () => {
     if (REACT_APP_LOAD === "live") {
       endpoint = `${BASE_URL}/${location}/search?${URL_CREDENTIALS}&results_per_page=30`;
     }
+    console.log("fetching from endpoint: ", endpoint);
 
     const responseSearch = await fetch(endpoint, {
       method: "GET",
@@ -96,8 +97,57 @@ const JobsMap = () => {
   return (
     <>
       <Navbar />
-      <br></br>
-      <br></br>
+      <section
+        class="home-section section-hero overlay bg-image"
+        id="home-section"
+      >
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-12">
+              <div class="mb-5 text-center">
+                <h1 class="text-white font-weight-bold">
+                  Job Salary Visualization
+                </h1>
+                <p>
+                  Have a look at the minimum, average and maximum salaries here!
+                </p>
+              </div>
+              <form method="post" class="search-jobs-form">
+                <div class="row mb-5">
+                  <label for="underline_select" class="sr-only">
+                    Underline select
+                  </label>
+                  <select
+                    id="underline_select"
+                    name="location"
+                    class="text-gray-500 bg border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
+                    onChange={handleLocationChange}
+                  >
+                    {Object.entries(countryOptions).map(([key, value]) => (
+                      <option key={key} value={key}>
+                        {value}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div class="row">
+                  <h1 className="text-2xl font-bold mb-4">
+                    Select a job category:
+                  </h1>
+                  {jobCategories.length > 0 && (
+                    <RadioGroup
+                      options={jobCategories}
+                      selectedOption={selectedCategory}
+                      onChange={handleCategoryChange}
+                    />
+                  )}
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <div className="flex items-center justify-center">
         {searchData ? (
           <SalaryCharts jobs={searchData.results} />
